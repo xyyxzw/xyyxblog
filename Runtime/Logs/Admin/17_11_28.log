@@ -1,0 +1,3407 @@
+[ 2017-11-28T08:49:26+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000343s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002907s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002611s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000513s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002428s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002459s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003067s ]
+
+[ 2017-11-28T08:49:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002641s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005465s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000622s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001388s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036551s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037155s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004676s ]
+
+[ 2017-11-28T08:49:29+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003081s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000374s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000953s ]
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002071s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003183s ]
+
+[ 2017-11-28T08:49:30+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000181s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002412s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004711s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000453s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001127s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002912s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006467s ]
+
+[ 2017-11-28T08:49:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001798s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003195s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='0' WHERE ( cid=32 ) [ RunTime:0.0022s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE ( cid=28 ) [ RunTime:0.0024s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE ( cid=31 ) [ RunTime:0.0025s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE ( cid=29 ) [ RunTime:0.0022s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE ( cid=30 ) [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000346s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000911s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001778s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002335s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000315s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.016702s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012367s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.004097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014692s ]
+
+[ 2017-11-28T08:49:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007325s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000405s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000980s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002711s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005128s ]
+
+[ 2017-11-28T08:54:38+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001799s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005372s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000588s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089372s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001608s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004036s ]
+
+[ 2017-11-28T08:54:38+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003117s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000414s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001052s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036550s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002064s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002234s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002807s ]
+
+[ 2017-11-28T08:54:40+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001846s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002476s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000407s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000978s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058791s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001513s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002081s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003002s ]
+
+[ 2017-11-28T08:54:46+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002462s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2017-11-28T08:55:49+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000237s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002498s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002270s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000438s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001203s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001896s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002758s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003420s ]
+
+[ 2017-11-28T08:55:50+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002568s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000505s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003676s ]
+
+[ 2017-11-28T08:55:51+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000134s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002805s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001919s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002553s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0024s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000390s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029966s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030688s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002886s ]
+
+[ 2017-11-28T08:55:53+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003778s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000423s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001008s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059418s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003718s ]
+
+[ 2017-11-28T08:56:04+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003341s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2017-11-28T08:56:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003019s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000426s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001021s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058458s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059060s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001718s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003282s ]
+
+[ 2017-11-28T08:57:05+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001984s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002689s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000511s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058999s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003209s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004808s ]
+
+[ 2017-11-28T08:57:05+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002771s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0049s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001015s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034119s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001832s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002630s ]
+
+[ 2017-11-28T08:57:07+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000166s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002867s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000960s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002595s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003196s ]
+
+[ 2017-11-28T08:57:11+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002191s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+NOTIC: 建议使用E方法替代throw_exception
+
+[ 2017-11-28T09:04:18+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002696s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000409s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058178s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002381s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002974s ]
+
+[ 2017-11-28T09:04:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000112s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002227s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000966s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003300s ]
+
+[ 2017-11-28T09:04:28+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002175s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='0' WHERE ( cid=32 ) [ RunTime:0.0025s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE ( cid=28 ) [ RunTime:0.0024s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE ( cid=31 ) [ RunTime:0.0021s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE ( cid=29 ) [ RunTime:0.0023s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE ( cid=30 ) [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000904s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026146s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001227s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001771s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000326s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.015647s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012726s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.003447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.014964s ]
+
+[ 2017-11-28T09:04:29+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002375s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000414s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001013s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003077s ]
+
+[ 2017-11-28T09:07:39+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001999s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002593s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000508s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001070s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003766s ]
+
+[ 2017-11-28T09:07:39+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000123s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002172s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003044s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000407s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032202s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001686s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002786s ]
+
+[ 2017-11-28T09:07:41+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001803s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002753s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000439s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001037s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002630s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003250s ]
+
+[ 2017-11-28T09:07:46+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003177s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000909s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027413s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001679s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002228s ]
+
+[ 2017-11-28T09:08:16+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002633s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000408s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000980s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002082s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002933s ]
+
+[ 2017-11-28T09:08:39+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001771s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002604s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000978s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056102s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056699s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002939s ]
+
+[ 2017-11-28T09:08:47+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001720s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002241s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000335s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000900s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001898s ]
+
+[ 2017-11-28T09:09:07+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002203s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002850s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='6' WHERE `cid` = 32 [ RunTime:0.0027s ]
+SQL: UPDATE `xyyx_category` SET `sort`='4' WHERE `cid` = 28 [ RunTime:0.0024s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0024s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 29 [ RunTime:0.0027s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000433s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028146s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002704s ]
+
+[ 2017-11-28T09:09:09+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000131s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002699s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001009s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001717s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003565s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004164s ]
+
+[ 2017-11-28T09:09:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001817s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002720s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 28 [ RunTime:0.0027s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0023s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 29 [ RunTime:0.0025s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000899s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002152s ]
+
+[ 2017-11-28T09:10:03+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001710s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001861s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002693s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000923s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001261s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001941s ]
+
+[ 2017-11-28T09:10:07+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003019s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000416s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000986s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003190s ]
+
+[ 2017-11-28T09:12:58+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002789s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000498s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057050s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002009s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003016s ]
+
+[ 2017-11-28T09:12:59+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009237s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0031s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000401s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001022s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002762s ]
+
+[ 2017-11-28T09:13:01+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000247s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002668s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000404s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000981s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002908s ]
+
+[ 2017-11-28T09:13:08+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001705s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002249s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 28 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000907s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023531s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001090s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001638s ]
+
+[ 2017-11-28T09:13:11+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000140s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002395s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000613s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001504s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002722s ]
+
+[ 2017-11-28T09:13:17+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002287s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0027s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000372s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000946s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024324s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001691s ]
+
+[ 2017-11-28T09:13:20+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001961s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002587s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000974s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057247s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001849s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002649s ]
+
+[ 2017-11-28T09:17:34+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003359s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000970s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057714s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002194s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002782s ]
+
+[ 2017-11-28T09:17:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001929s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002597s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000973s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057658s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001758s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002681s ]
+
+[ 2017-11-28T09:17:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002085s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002256s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000422s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001057s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059647s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001894s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002254s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002865s ]
+
+[ 2017-11-28T09:17:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001987s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002616s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000401s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000967s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001674s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004282s ]
+
+[ 2017-11-28T09:17:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001878s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002466s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000397s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000967s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057230s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001918s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002521s ]
+
+[ 2017-11-28T09:17:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001685s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002397s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000398s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000982s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001364s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001947s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002207s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002802s ]
+
+[ 2017-11-28T09:17:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002411s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002809s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059339s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002726s ]
+
+[ 2017-11-28T09:17:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001683s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001993s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002588s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000394s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000960s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056839s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002581s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003630s ]
+
+[ 2017-11-28T09:17:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002634s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000423s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000997s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058416s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003121s ]
+
+[ 2017-11-28T09:17:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001815s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002293s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000597s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001558s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002676s ]
+
+[ 2017-11-28T09:17:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001932s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002017s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002650s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000976s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055061s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002488s ]
+
+[ 2017-11-28T09:17:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001717s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001820s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002419s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000971s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004107s ]
+
+[ 2017-11-28T09:17:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002383s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000425s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001034s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004422s ]
+
+[ 2017-11-28T09:17:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002296s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000419s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001226s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056617s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001263s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002695s ]
+
+[ 2017-11-28T09:17:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001700s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002256s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000417s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000986s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067549s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004156s ]
+
+[ 2017-11-28T09:17:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002364s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000396s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000970s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056106s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003069s ]
+
+[ 2017-11-28T09:17:38+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002256s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002883s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000558s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001315s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001911s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002313s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002898s ]
+
+[ 2017-11-28T09:17:43+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001679s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003149s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+SQL: UPDATE `xyyx_category` SET `sort`='0' WHERE `cid` = 28 [ RunTime:0.0027s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000350s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000949s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024651s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001247s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001792s ]
+
+[ 2017-11-28T09:17:46+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002457s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000438s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001057s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058687s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002652s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003463s ]
+
+[ 2017-11-28T09:22:16+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001980s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002530s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000524s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001121s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002870s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003481s ]
+
+[ 2017-11-28T09:22:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000271s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003247s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003880s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0056s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0057s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000398s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001014s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033369s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034032s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002262s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002898s ]
+
+[ 2017-11-28T09:22:17+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002620s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000413s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001938s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002582s ]
+
+[ 2017-11-28T09:22:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003176s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000362s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000952s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023744s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024339s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001627s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000321s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020267s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011645s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.007898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.018472s ]
+
+[ 2017-11-28T09:22:23+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001912s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002549s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000409s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001032s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055134s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002704s ]
+
+[ 2017-11-28T09:22:30+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001842s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003414s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0008s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000379s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000943s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002171s ]
+
+[ 2017-11-28T09:22:33+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002310s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000434s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001009s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056128s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001906s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004999s ]
+
+[ 2017-11-28T09:22:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002380s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000358s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000945s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024896s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002460s ]
+
+[ 2017-11-28T09:22:38+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001726s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001614s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002205s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000424s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001022s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057560s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001990s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002600s ]
+
+[ 2017-11-28T09:25:11+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002504s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000557s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001466s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002027s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004759s ]
+
+[ 2017-11-28T09:25:11+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000134s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003185s ]
+SQL: SHOW COLUMNS FROM `xyyx_article` [ RunTime:0.0021s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_article` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `xyyx_chat` [ RunTime:0.0017s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_delete` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_chat` WHERE `is_show` = 0 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `xyyx_comment` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `xyyx_comment` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000406s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001012s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032940s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003605s ]
+
+[ 2017-11-28T09:25:13+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002988s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003619s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000421s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001015s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001939s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002263s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002854s ]
+
+[ 2017-11-28T09:25:14+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001930s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002188s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000356s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000959s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023130s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023750s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001631s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000491s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.020408s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012156s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.008904s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.019989s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 29 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000334s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.041566s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012361s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.029376s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.040679s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000322s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.061484s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011734s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.050028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.060720s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 93 行.
+SQL: UPDATE `xyyx_category` SET `sort`='6' WHERE `cid` = 32 [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000322s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.083092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011620s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.071618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.082170s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002448s ]
+
+[ 2017-11-28T09:25:16+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001828s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002502s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000543s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001172s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.064693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014492s ]
+
+[ 2017-11-28T09:25:16+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002974s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000472s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001140s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001929s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002677s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003240s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003991s ]
+
+[ 2017-11-28T09:25:18+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002522s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000930s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025939s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026576s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002075s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000322s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.023047s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011515s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.009245s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000157s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.019237s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 29 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000323s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.043128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011621s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.029222s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.039338s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000328s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.063054s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011801s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.049174s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.059460s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 93 行.
+SQL: UPDATE `xyyx_category` SET `sort`='6' WHERE `cid` = 32 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000345s ]
+INFO: [ template_filter ] --END-- [ RunTime:-0.083312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011765s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.069468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000149s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.079733s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\bjyblog2\ThinkPHP\Library\Think\View.class.php:95) D:\bjyblog2\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001836s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002421s ]
+
+[ 2017-11-28T09:25:19+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002201s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057246s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057843s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001249s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002118s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005255s ]
+
+[ 2017-11-28T09:33:44+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001823s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002933s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000398s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000967s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001542s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004909s ]
+
+[ 2017-11-28T09:33:50+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001736s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001728s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002900s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+SQL: UPDATE `xyyx_category` SET `sort`='2' WHERE `cid` = 28 [ RunTime:0.0037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000485s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001778s ]
+
+[ 2017-11-28T09:33:53+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000130s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002225s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000423s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001805s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002953s ]
+
+[ 2017-11-28T09:35:16+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000129s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001798s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002465s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000411s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000987s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002232s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002821s ]
+
+[ 2017-11-28T09:35:17+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000121s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001886s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002253s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000462s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001364s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003277s ]
+
+[ 2017-11-28T09:35:24+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000114s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001681s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002475s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0025s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0026s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 29 [ RunTime:0.0026s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0030s ]
+SQL: UPDATE `xyyx_category` SET `sort`='6' WHERE `cid` = 32 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000477s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023277s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002424s ]
+
+[ 2017-11-28T09:35:25+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002472s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000397s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000965s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055666s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056258s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001788s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003974s ]
+
+[ 2017-11-28T09:35:33+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002177s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000341s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000907s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023094s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023786s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001645s ]
+
+[ 2017-11-28T09:35:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001985s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002319s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000599s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001395s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057821s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058441s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001636s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004083s ]
+
+[ 2017-11-28T09:35:37+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002422s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0028s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0026s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 29 [ RunTime:0.0025s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0024s ]
+SQL: UPDATE `xyyx_category` SET `sort`='6' WHERE `cid` = 32 [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001053s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001823s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002201s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002804s ]
+
+[ 2017-11-28T09:35:39+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000131s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001638s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002229s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000968s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001218s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001769s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002832s ]
+
+[ 2017-11-28T09:37:04+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001913s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002546s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 28 [ RunTime:0.0025s ]
+SQL: UPDATE `xyyx_category` SET `sort`='5' WHERE `cid` = 31 [ RunTime:0.0029s ]
+SQL: UPDATE `xyyx_category` SET `sort`='8' WHERE `cid` = 29 [ RunTime:0.0009s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 30 [ RunTime:0.0023s ]
+SQL: UPDATE `xyyx_category` SET `sort`='6' WHERE `cid` = 32 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000337s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000907s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025404s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001328s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002468s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003037s ]
+
+[ 2017-11-28T09:37:05+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000364s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002419s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000416s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001026s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048639s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001936s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002401s ]
+
+[ 2017-11-28T09:37:46+08:00 ] 127.0.0.1 /index.php/Admin/Category/delete/cid/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002311s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000584s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001250s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001930s ]
+
+[ 2017-11-28T09:37:52+08:00 ] 127.0.0.1 /index.php/Admin/Category/delete/cid/31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001808s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003076s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: childs D:\bjyblog2\Application\Common\Model\CategoryModel.class.php 第 45 行.
+SQL: DELETE FROM `xyyx_category` WHERE `cid` = 31 [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000472s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004015s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004624s ]
+
+[ 2017-11-28T09:37:53+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001777s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002381s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000405s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001046s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002735s ]
+
+[ 2017-11-28T09:37:57+08:00 ] 127.0.0.1 /index.php/Admin/Category/delete/cid/32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000132s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002852s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002374s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined variable: childs D:\bjyblog2\Application\Common\Model\CategoryModel.class.php 第 45 行.
+SQL: DELETE FROM `xyyx_category` WHERE `cid` = 32 [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000352s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000957s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026353s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001945s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002641s ]
+
+[ 2017-11-28T09:37:58+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002102s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002722s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000961s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001880s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002745s ]
+
+[ 2017-11-28T09:38:01+08:00 ] 127.0.0.1 /index.php/Admin/Category/delete/cid/28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000125s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004121s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined variable: childs D:\bjyblog2\Application\Common\Model\CategoryModel.class.php 第 45 行.
+SQL: DELETE FROM `xyyx_category` WHERE `cid` = 28 [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000930s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027335s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001563s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002149s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002976s ]
+
+[ 2017-11-28T09:38:02+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001748s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003420s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000962s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002591s ]
+
+[ 2017-11-28T09:38:19+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002313s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000399s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000967s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037840s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001933s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002730s ]
+
+[ 2017-11-28T09:38:20+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002300s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000396s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000958s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039204s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001369s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001985s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002680s ]
+
+[ 2017-11-28T09:38:20+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002366s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000410s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001945s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002687s ]
+
+[ 2017-11-28T09:38:20+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002943s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000579s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001371s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001687s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002196s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003038s ]
+
+[ 2017-11-28T09:38:21+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002871s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000420s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001016s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001858s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002747s ]
+
+[ 2017-11-28T09:38:21+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002237s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001045s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001737s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002402s ]
+
+[ 2017-11-28T09:38:21+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000138s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001951s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002322s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000412s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001007s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039233s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001795s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002014s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002825s ]
+
+[ 2017-11-28T09:38:21+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001915s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003318s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000396s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038715s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002662s ]
+
+[ 2017-11-28T09:38:21+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001696s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001809s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002411s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000458s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037124s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001843s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002788s ]
+
+[ 2017-11-28T09:38:21+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002556s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000402s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000972s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039194s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002869s ]
+
+[ 2017-11-28T09:38:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000132s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002664s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000454s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039475s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002048s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003244s ]
+
+[ 2017-11-28T09:38:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004695s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000400s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000973s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039486s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001441s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002166s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002779s ]
+
+[ 2017-11-28T09:38:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001865s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001744s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002328s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000409s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001020s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001508s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002169s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002723s ]
+
+[ 2017-11-28T09:38:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002150s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002758s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000971s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040078s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002665s ]
+
+[ 2017-11-28T09:38:22+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003147s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002473s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000410s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000987s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037314s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001842s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002739s ]
+
+[ 2017-11-28T09:38:31+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001835s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002380s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000369s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000946s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034590s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002701s ]
+
+[ 2017-11-28T09:38:33+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002376s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000436s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001957s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002308s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002894s ]
+
+[ 2017-11-28T09:38:53+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002026s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003383s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000440s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001040s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034745s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002124s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002683s ]
+
+[ 2017-11-28T09:39:00+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002575s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000396s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000973s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001935s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002760s ]
+
+[ 2017-11-28T09:39:01+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000126s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001962s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002579s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000370s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000946s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001894s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002853s ]
+
+[ 2017-11-28T09:39:05+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002512s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000398s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000978s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037451s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001888s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003039s ]
+
+[ 2017-11-28T20:48:03+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000170s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001982s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002572s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000454s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001317s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038906s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039499s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001883s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002449s ]
+
+[ 2017-11-28T20:48:04+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002951s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000415s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001052s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038171s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038765s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003888s ]
+
+[ 2017-11-28T20:48:24+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000120s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001950s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002620s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0007s ]
+SQL: INSERT INTO `xyyx_category` (`cname`,`pid`,`sort`,`keywords`,`description`) VALUES ('测试','0','1','1','1') [ RunTime:0.0052s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000336s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000898s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001994s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002977s ]
+
+[ 2017-11-28T20:48:25+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001750s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002311s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000583s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001219s ]
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001891s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002635s ]
+
+[ 2017-11-28T20:48:35+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000118s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001822s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003224s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0009s ]
+SQL: INSERT INTO `xyyx_category` (`cname`,`pid`,`sort`,`keywords`,`description`) VALUES ('php','0','2','2','2') [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000343s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000901s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002617s ]
+
+[ 2017-11-28T20:48:36+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002368s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000370s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000956s ]
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003372s ]
+
+[ 2017-11-28T20:48:52+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002702s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+SQL: INSERT INTO `xyyx_category` (`cname`,`pid`,`sort`,`keywords`,`description`) VALUES ('JavaScript','0','3','3','3') [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000338s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000913s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026563s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002635s ]
+
+[ 2017-11-28T20:48:54+08:00 ] 127.0.0.1 /index.php/Admin/Category/add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002505s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000467s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001180s ]
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+NOTIC: [8] Undefined variable: cid D:\bjyblog2\Runtime\Cache\Admin\8a25fd7a872c6677dccd5d28490b6ff3.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003565s ]
+
+[ 2017-11-28T20:48:54+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000122s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002511s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000410s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001140s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050071s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050653s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003324s ]
+
+[ 2017-11-28T20:49:06+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002298s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: UPDATE `xyyx_category` SET `sort`='1' WHERE `cid` = 33 [ RunTime:0.0023s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 34 [ RunTime:0.0026s ]
+SQL: UPDATE `xyyx_category` SET `sort`='2' WHERE `cid` = 35 [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000340s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000914s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025196s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001273s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002638s ]
+
+[ 2017-11-28T20:49:07+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002580s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000661s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001264s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048629s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049207s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002656s ]
+
+[ 2017-11-28T20:49:16+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000116s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002268s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0012s ]
+SQL: UPDATE `xyyx_category` SET `sort`='4' WHERE `cid` = 33 [ RunTime:0.0024s ]
+SQL: UPDATE `xyyx_category` SET `sort`='2' WHERE `cid` = 35 [ RunTime:0.0022s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 34 [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000347s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000910s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001540s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002103s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002776s ]
+
+[ 2017-11-28T20:49:17+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000119s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002746s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000414s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001013s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049589s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001348s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001899s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002958s ]
+
+[ 2017-11-28T20:49:28+08:00 ] 127.0.0.1 /index.php/Admin/Category/sort
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000117s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002452s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+SQL: UPDATE `xyyx_category` SET `sort`='2' WHERE `cid` = 35 [ RunTime:0.0026s ]
+SQL: UPDATE `xyyx_category` SET `sort`='3' WHERE `cid` = 34 [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000340s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023989s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024581s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001780s ]
+
+[ 2017-11-28T20:49:31+08:00 ] 127.0.0.1 /index.php/Admin/Category/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002891s ]
+SQL: SHOW COLUMNS FROM `xyyx_category` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `xyyx_category` ORDER BY sort  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000430s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001093s ]
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+NOTIC: [8] Undefined index: id D:\bjyblog2\Runtime\Cache\Admin\5ed692c38c12faf04219572ad22d2d7d.php 第 56 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002102s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005153s ]
+
