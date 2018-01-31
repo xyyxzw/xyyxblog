@@ -22,19 +22,20 @@ return array(
 'TMPL_EXCEPTION_FILE'=>APP_DEBUG?THINK_PATH.'Tpl/think_exception.tpl':'./Templlate/default/Home/Public/404/html',
 // 'TMPL_EXCEPTION_FILE'   =>'./Template/default/Home/Public/404.html',                                    //404设置
 //session设置
-// 假设我们实现了一个Db类型的session驱动，那么只需要在配置文件中使用： 
-// 'SESSION_TYPE'=>'Db'  // 或者  'SESSION_OPTIONS'=>array(  'type'=>'Db', )系统在初始化Session的时候会自动处理，采用Db机制来处理session。 
+// 假设我们实现了一个Db类型的session驱动，那么只需要在配置文件中使用：
+// 'SESSION_TYPE'=>'Db'  // 或者  'SESSION_OPTIONS'=>array(  'type'=>'Db', )系统在初始化Session的时候会自动处理，采用Db机制来处理session。
 'SESSION_OPTIONS'=>array(
           'name'=>'XYYXSESSION',//设置session名
           'expire'=>24*3600*15,//session保存15天
           'use_trans_sid'=>1,//跨页传递
           'use_only_cookies'=>0,//是否只开启基于cookies的session的会话方法
 	),
+//'SESSION_PREFIX'        =>  'xyyx',
 //URL设置
 'URL_MODEL'=>1,//为了兼容性更好而设置成1 如果确认服务器开启了mod_rewrite 请设置为 2
 'URL_CASE_INSENSITIVE'=>false,//区分url大小写
 //当 URL_CASE_INSENSITIVE 设置为true的时候表示URL地址不区分大小写，这个也是框架在部署模式下面的默认设置。
-// 当开启调试模式的情况下，这个参数是false，因此你会发现在调试模式下面URL区分大小写的情况。 
+// 当开启调试模式的情况下，这个参数是false，因此你会发现在调试模式下面URL区分大小写的情况。
 //本系统版本号
 'THINK_INFORMATION'=>'1.1',
 );

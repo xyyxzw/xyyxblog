@@ -1,11 +1,28 @@
 <?php
 //设置验证码
+header("Content-type:text/html;charset=utf-8");
+//调试数据易于阅读
+function p($data){
+    $str='<pre style="display: block;padding: 9.5px;margin: 44px 0 0 0;font-size: 13px;line-height: 1.42857;color: #333;word-break: break-all;word-wrap: break-word;background-color: #F5F5F5;border: 1px solid #CCC;border-radius: 4px;">';
+    //如果是boolean或者null直接显示文字，否则print
+    if(is_bool($data)){
+        $show_data=$data?'true':'false';
+    }elseif(is_null($data)){
+        $show_data='null';
+    }else{
+        $show_data=print_r($data,true);// 第二个参数 为true时 返回值 而不显示
+    }
+    $str.=$show_data;
+    $str.='</pre>';
+    echo $str;
+}
+
 function show_verify($config=''){
 	if($config==''){
 		$config=array(
                                 'codeSet'=>'13456789abcdefghjkmnpqrstuvwxyABCDEFGHJKMNPQRSTUVWXY',
                                 'fontSize'=>30,
-                                //是否使用混淆曲线 默认为true 
+                                //是否使用混淆曲线 默认为true
                                 'useCurve'=>false,
                                 'imageH'=>60,
                                 'imageW'=>240,
