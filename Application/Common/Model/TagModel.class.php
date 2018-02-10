@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:40:04
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-01-31 10:34:58
+ * @Last Modified time: 2018-02-08 16:28:27
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -50,7 +50,7 @@ class TagModel extends BaseModel{
             return $this->where(array('tid'=>$tid))->save($data);
         }
     }
-    //根据tid获取单挑数据
+    //根据tid获取单条数据
     public function getDataByTid($tid,$field='all'){
         if($field=='all'){
             return $this->where(array('tid'=>$tid))->find();
