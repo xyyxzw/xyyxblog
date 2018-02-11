@@ -40,7 +40,9 @@ class ArticleController extends AdminBaseController{
 
     //文章列表
     public function index(){
-        $data=$this->db->getPageData('all','all','all',0,15);
+        $data=$this->db->getPageData('all','all','all',0,5);
+        // echo "<pre>";
+        // print_r($data);die;
         $this->assign('data',$data['data']);
         $this->assign('page',$data['page']);
         $this->display();

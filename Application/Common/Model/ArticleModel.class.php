@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-10 10:44:39
+ * @Last Modified time: 2018-02-11 16:29:35
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -91,6 +91,52 @@ class ArticleModel extends BaseModel{
     }
     /**
      * 获得文章分页数据
-     * @param strind $cid 分类id
+     * @param  string  $cid       分类id all为全部分类
+     * @param  string  $tid       标签id all为全部标签
+     * @param  string  $is_show   是否显示 1为显示 0为不显示
+     * @param  string  $is_delete 状态 1为删除 0为正常
+     * @param  integer $limit     分页条数
+     * @return array $data  分页样式 和 分页数据
      */
+  public function getPageData($cid='all',$tid='all',$is_show='1',$is_delete='0',$limit=10){
+    if($cid=='all' && $tid=='all'){
+        //获取全部分类 全部标签下的文章
+        if($is_show=='all'){
+            $where=array('is_delete'=>$is_delete);
+        }else{
+            $where=array(
+                'is_delete'=>$is_delete,
+                'is_show'=>$is_show
+                );
+        }
+        $count=$this->where($where)->count();
+        $page=new \Org\Xyyx\Page($count,$limit);
+        $page->setConfig('prev','<<');
+        $page->setConfig('next','>>');
+        $list=$this->where($where)->order('addtime desc')->limit($page->firstRow.','.$page->listRows)->select();
+        $extend=array(
+            'type'=>'index',
+            'id'=>0
+            );
+    }
+    $show=$page->show();
+    foreach($list as $k=>$v){
+        $list[$k]['addtime']=word_time($v['addtime']);
+        $list[$k]['tag']=D('ArticleTag')->getDataByAid($v['aid'],'all');
+        $list[$k]['pic_path']=D('ArticlePic')->getDataByAid($v['aid']);
+        //current() 函数返回数组中的当前元素的值
+        $list[$k]['category']=current(D('Category')->getDataByCid($v['cid'],'cid,cid,cname'));
+        // $list[$k]['category']=D('Category')->getDataByCid($v['cid'],'cid,cname');
+        //如果传入了2个以上的字段名，则返回一个二维数组（类似select方法的返回值，区别在于索引是二维数组的键名是第一个字段的值）
+        $v['content']=preg_ueditor_image_path($v['content']);
+        $list[$k]['content']=htmlspecialchars($v['content']);
+        $list[$k]['url']=U('Home/Index/article/',array('aid'=>$v['aid']));
+        $list[$k]['extend']=$extend;
+    }
+    $data=array(
+        'page'=>$show,
+        'data'=>$list,
+        );
+    return $data;
+  }
 }

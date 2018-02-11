@@ -15,7 +15,7 @@
  * 邮  箱：baijunyao@baijunyao.com
  * 博  客：http://baijunyao.com
  */
-namespace Org\Bjy;
+namespace Org\Xyyx;
 
 class Page{
     public $firstRow; // 起始行数
@@ -51,7 +51,7 @@ class Page{
         /* 基础设置 */
         $this->totalRows  = $totalRows; //设置总记录数
         $this->listRows   = $listRows;  //设置每页显示行数
-        $this->parameter  = empty($parameter) ? $_GET : $parameter;
+        $this->parameter  = empty($parameter) ? $_GET : $parameter;//分页跳转时要带的参数
         $this->nowPage    = empty($_GET[$this->p]) ? 1 : intval($_GET[$this->p]);
         $this->nowPage    = $this->nowPage>0 ? $this->nowPage : 1;
         $this->firstRow   = $this->listRows * ($this->nowPage - 1);
@@ -130,7 +130,7 @@ class Page{
                     }
                 }else{
                     $link_page .= '<span class="current">' . $page . '</span>';
-                }                
+                }
             }
 
         }
