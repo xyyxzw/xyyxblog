@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-02-08 16:34:48
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-10 15:02:09
+ * @Last Modified time: 2018-02-13 15:20:24
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -38,5 +38,36 @@ class ArticlePicModel extends BaseModel{
         $root_path=rtrim($_SERVER['SCRIPT_NAME'],'/index.php');
         $data[0]['path']=$root_path.$data[0]['path'];
         return $data[0]['path'];
+    }
+
+     // 传递aid删除相关图片
+    public function deleteData($aid,$content=''){
+        $data=$this->where(array('aid'=>$aid))->select();
+        foreach($data as $k=>$v){
+            // if(!empty($v['path'])){
+        //     @unlink($_SERVER['DOCUMENT_ROOT'].$v['path']);
+            // echo $_SERVER['DOCUMENT_ROOT'].$v['path'];
+            // }
+              if(!empty($v['path']) && strpos($content,$v['path']) == false){
+                     @unlink($_SERVER['DOCUMENT_ROOT'].$v['path']);
+              }
+           }
+
+        $this->where(array('aid'=>$aid))->delete();
+         return true;
+         // return $data;
+    }
+
+    //彻底删除全部改文章下的图片
+    public function deleteDataAll($aid){
+         $data=$this->where(array('aid'=>$aid))->select();
+         foreach ($data as $k => $v) {
+             if(!empty($v['path'])){
+                @unlink($_SERVER['DOCUMENT_ROOT'].$v['path']);
+             }
+         }
+          $this->where(array('aid'=>$aid))->delete();
+         return true;
+
     }
 }

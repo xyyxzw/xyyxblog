@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-02-08 16:12:44
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-11 15:50:08
+ * @Last Modified time: 2018-02-13 12:40:43
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -39,5 +39,11 @@ class ArticleTagModel extends BaseModel{
             return $this->where(array('aid'=>$aid))->getField('tid',true);
         }
 
+    }
+
+    // 传递aid删除相关数据
+    public function deleteData($aid){
+        $this->where(array('aid'=>$aid))->delete();
+        return true;
     }
 }

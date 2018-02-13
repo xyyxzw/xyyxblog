@@ -47,4 +47,44 @@ class ArticleController extends AdminBaseController{
         $this->assign('page',$data['page']);
         $this->display();
     }
+
+    //修改文章
+    public function edit(){
+        if(IS_POST){
+            if($this->db->editData()){
+                $this->success('修改成功');
+            }else{
+                $this->error('修改失败');
+            }
+        }else{
+            $aid=I('aid');
+            $data=$this->db->getDataByAid($aid);
+            $allCategory=D('Category')->getAllData();
+            $allTag=D('Tag')->getAllData();
+            $this->assign('allCategory',$allCategory);
+            $this->assign('allTag',$allTag);
+            $this->assign('data',$data);
+            $this->display();
+        }
+    }
+    /**
+     * 测试删除文章和修改文章时图片处理 时的数据获取
+     * @param  [type] $aid [description]
+     * @return [type]      [description]
+     */
+    public function ceshi($aid){
+        //$aid=I('aid');
+        $data=D('ArticlePic')->deleteData($aid);
+        echo '<pre>';
+        print_r($data);
+    }
+
+    // 彻底删除
+    public function delete(){
+        if($this->db->deleteData()){
+            $this->success('彻底删除成功');
+        }else{
+            $this->error('彻底删除失败');
+        }
+    }
 }

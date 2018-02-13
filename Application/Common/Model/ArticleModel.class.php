@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-11 16:29:35
+ * @Last Modified time: 2018-02-13 15:20:13
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -138,5 +138,70 @@ class ArticleModel extends BaseModel{
         'data'=>$list,
         );
     return $data;
+  }
+
+  // 传递aid获取单条全部数据
+  public function getDataByAid($aid){
+    $data=$this->where(array('aid'=>$aid))->find();
+    $data['tids']=D('ArticleTag')->getDataByAid($aid);
+    $data['tag']=D('ArticleTag')->getDataByAid($aid,'all');
+    $data['category']=current(D('Category')->getDataByCid($data['cid'],'cid,cid,cname,keywords'));
+    // 获取相对路径的图片地址
+    $data['content']=preg_ueditor_image_path($data['content']);
+    return $data;
+  }
+
+  // 修改数据
+  public function editData(){
+      // 获取post数据
+      $data=I('post.');
+      // 反转义为下文的 preg_replace使用
+      $data['content']=htmlspecialchars_decode($data['content']);
+      // 判断是否修改文章中图片的默认的alt 和title
+      $image_title_alt_word=C('IMAGE_TITLE_ALT_WORD');
+      if(empty($image_title_alt_word)){
+          //修改图片默认的title和alt
+          //解释：(?<=(")) 表示 匹配以(")开头的字符串，并且捕获(存储)到分组中(?=(")) 表示 匹配以(")结尾的字符串，并且捕获(存储)到分组中
+          $data['content']=preg_replace('/title=\"(?<=").*?(?=")\"/','title="徐逸以轩博客"',$data['content']);
+          $data['content']=preg_replace('/alt=\"(?<=").*?(?=")\"/','alt="徐逸以轩博客"',$data['content']);
+      }else{
+          $data['content']=preg_replace('/title=\"(?<=").*?(?=")\"/','title="'.$image_title_alt_word.'"',$data['content']);
+          $data['content']=preg_replace('/alt=\"(?<=").*?(?=")\"/','alt="'.$image_title_alt_word.'"',$data['content']);
+      }
+      // 将绝对路径转换为相对路径
+      $data['content']=preg_replace('/src=\"^\/.*\/Upload\/image\/ueditor$/','src="/Upload/image/ueditor',$data['content']);
+      $data['content']=htmlspecialchars($data['content']);
+      if($this->create($data)){
+          $aid=$data['aid'];
+          $this->where(array('aid'=>$aid))->save();
+          $image_path=get_ueditor_image_path($data['content']);
+          D('ArticleTag')->deleteData($aid);
+          if(isset($data['tids'])){
+              D('ArticleTag')->addData($aid,$data['tids']);
+          }
+          // 删除图片路径
+          D('ArticlePic')->deleteData($aid,$data['content']);
+          if(!empty($image_path)){
+              if(C('WATER_TYPE')!=0){
+                  foreach ($image_path as $k => $v) {
+                      add_water('.'.$v);
+                  }
+              }
+              // 添加新图片路径
+              D('ArticlePic')->addData($aid,$image_path);
+          }
+          return true;
+      }else{
+          return false;
+      }
+  }
+
+  // 彻底删除
+  public function deleteData(){
+      $aid=I('get.aid',0,'intval');
+      D('ArticlePic')->deleteDataAll($aid);
+      D('ArticleTag')->deleteData($aid);
+      $this->where(array('aid'=>$aid))->delete();
+      return true;
   }
 }
