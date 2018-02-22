@@ -56,12 +56,21 @@ function check_verify($code){
 2、iconv函数会先将当前字符串转换为相应的编码再进行截取，而mb函数则是直接根据指定的编码进行截取(提供安全的多字节截取)，所以mb函数的截取效率更高。
 
 因此，mb_substr函数进行中文字符串的截取为最合适的选择。
+输入的描述大于规定的长度才加...，否则不截取也不加...
 */
-function re_substr($str,$start=0,$length,$suffix=true,$charset="utf-8"){
+function re_substr($str,$start=0,$length,$charset="utf-8"){
     if(function_exists('mb_substr')){
-        $slice=mb_substr($str,$start,$length,$charset);
+        if(mb_strlen($str)>$length){
+        $slice=mb_substr($str,$start,$length,$charset).'...';
+       }else{
+        $slice=$str;
+       }
     }elseif(function_exists('iconv_substr')){
-        $slice=iconv_substr($str,$start,$length,$charset);
+        if(iconv_strlen($str)>$length){
+        $slice=iconv_substr($str,$start,$length,$charset).'...';
+       }else{
+        $slice=$str;
+       }
     }else{
         //UTF8
 // [\x01-\x7f]|[\xc0-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf]{2}|[\xf0-\xff][\x80-\xbf]{3}
@@ -76,9 +85,32 @@ function re_substr($str,$start=0,$length,$suffix=true,$charset="utf-8"){
         $slice=join("",array_slice($match[0],$start,$length));
 
     }
-    return $suffix?$slice.'...':$slice;
+    return $slice;
 
 }
+//未优化版
+// function re_substr($str,$start=0,$length,$suffix=true,$charset="utf-8"){
+//     if(function_exists('mb_substr')){
+//         $slice=mb_substr($str,$start,$length,$charset);
+//     }elseif(function_exists('iconv_substr')){
+//         $slice=iconv_substr($str,$start,$length,$charset);
+//     }else{
+//         //UTF8
+// // [\x01-\x7f]|[\xc0-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf]{2}|[\xf0-\xff][\x80-\xbf]{3}
+//         $re['utf-8']   = "/[\x01-\x7f]|[\xc2-\xdf][\x80-\xbf]|[\xe0-\xef][\x80-\xbf]{2}|[\xf0-\xff][\x80-\xbf]{3}/";
+//         $re['gb2312'] = "/[\x01-\x7f]|[\xb0-\xf7][\xa0-\xfe]/";
+//         $re['gbk']  = "/[\x01-\x7f]|[\x81-\xfe][\x40-\xfe]/";
+//         $re['big5']   = "/[\x01-\x7f]|[\x81-\xfe]([\x40-\x7e]|\xa1-\xfe])/";
+//         //$match多维数组，作为输出参数输出所有匹配结果
+//         preg_match_all($re[$charset],$str,$match);
+//         //join函数 是 implode() 函数的别名 把数组元素组合为一个字符串
+//         //array_slice() 函数返回数组中的选定部分。
+//         $slice=join("",array_slice($match[0],$start,$length));
+
+//     }
+//     return $suffix?$slice.'...':$slice;
+
+// }
 /**
  * 传递ueditor生成的内容获取其中图片的路径
  * @param  string $str 含有图片链接的字符串

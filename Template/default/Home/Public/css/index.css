@@ -328,9 +328,9 @@ a {
     -ms-transform: scaleX(0);
     -o-transform: scaleX(0);
     transform: scaleX(0);
-    transition-duration: .2s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s
+    transition-duration: .2s;//CSS3 规定完成过渡效果需要多少秒或毫秒。
+    transition-timing-function: ease-in-out;//css3 规定速度效果的速度曲线。规定以慢速开始和结束的过渡效果
+    transition-delay: 0s;//css3 定义过渡效果何时开始。
 }
 
 #b-content .b-one-article .b-oa-title:hover::before {
@@ -351,7 +351,8 @@ a {
     padding: 3px;
     width: 100%;
     height: auto;
-    border: 1px solid #CCC;
+    // border: 1px solid #CCC;
+    border: 1px solid #8ABC4C;
     overflow: hidden
 }
 
@@ -361,16 +362,36 @@ a {
 }
 
 #b-content .b-one-article .b-style1 img {
-    -webkit-transition: opacity .35s, -webkit-transform .35s;
-    transition: opacity .35s, transform .35s;
-    -webkit-transform: scale(1);
-    transform: scale(1)
+    // -webkit-transition: opacity .35s, -webkit-transform .35s;
+    // transition: opacity .35s, transform .35s;//transform 属性向元素应用 2D 或 3D 转换。该属性允许我们对元素进行旋转、缩放、移动或倾斜。
+    //
+    // -webkit-transform: scale(1);
+    // transform: scale(1)
+
+
+
+    -webkit-transform: skewX(0deg);
+       -moz-transform: skewX(0deg);
+        -ms-transform: skewX(0deg);
+         -o-transform: skewX(0deg);
+            transform: skewX(0deg);
+    transition-duration: .2s;//CSS3 规定完成过渡效果需要多少秒或毫秒。
+    transition-timing-function: ease-in-out;//css3 规定速度效果的速度曲线。规定以慢速开始和结束的过渡效果
+    transition-delay: 0s;//css3 定义过渡效果何时开始。
 }
 
 #b-content .b-one-article .b-style1:hover img {
-    opacity: .7;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1)
+    // opacity: .7;
+    // -webkit-transform: scale(1.1);
+    // transform: scale(1.1);
+
+
+    opacity:.8;
+    -webkit-transform: skewX(180deg);
+       -moz-transform: skewX(180deg);
+        -ms-transform: skewX(180deg);
+         -o-transform: skewX(180deg);
+            transform: skewX(180deg);
 }
 
 #b-content .b-one-article .b-readall {

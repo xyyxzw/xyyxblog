@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-13 15:20:13
+ * @Last Modified time: 2018-02-22 10:20:18
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -34,7 +34,7 @@ class ArticleModel extends BaseModel{
         }else{
             $data=I('post.description');
             $des=htmlspecialchars_decode($data);
-            $des=re_substr(strip_tags($des),0,100,true);
+            $des=re_substr(strip_tags($des),0,100);
             return $des;
         }
     }

@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<include file="Public/public_head" title="" keywords="{$Think.config.WEB_KEYWORDS}" description="{$Think.config.WEB_DESCRIPTION}"/>
 </head>
 <body>
-	'__HOME_CSS__'
-	__HOME_CSS__
+	<include file="Public/public_nav"/>
+    <div class="b-h-70"></div>
+    <div id="b-content" class="container">
+    <div class="row">
+    <include file="Public/public_list"/>
+    <include file="Public/public_right"/>
+    </div>
+    <div class="row">
+    <include file="Public/public_foot"/>
+    </div>
+    </div>
+    <include file="Public/public_login"/>
 </body>
 </html>
