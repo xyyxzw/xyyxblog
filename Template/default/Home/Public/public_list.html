@@ -11,21 +11,28 @@
             <h3 class="col-xs-12 col-md-12 col-lg-12"> <a class="b-oa-title" href="{$v['url']}" target="_blank" onclick="return recordId('{$v['extend']['type']}',{$v['extend']['id']})">{$v['title']}</a></h3>
             <div class="col-xs-12 col-md-12 col-lg-12 b-date">
                 <ul class="row">
-                    <li class="col-xs-5 col-md-2 col-lg-3"><i class="fa fa-user"></i> {$v['author']}</li>
-                    <li class="col-xs-7 col-md-3 col-lg-3"><i class="fa fa-calendar"></i> {$v['addtime']}</li>
-                    <li class="col-xs-5 col-md-2 col-lg-2"><i class="fa fa-list-alt"></i> <a href="{:U('Home/Index/category',array('cid'=>$v['cid']))}" target="_blank">{$v['category']['cname']}</a>
-                        <li class="col-xs-7 col-md-5 col-lg-4 "><i class="fa fa-tags"></i>
+                    <li class="col-xs-5 col-md-2 col-lg-2"><i class="fa fa-user"></i> {$v['author']}</li>
+                    <li class="col-xs-7 col-md-2 col-lg-2"><i class="fa fa-calendar"></i> {$v['addtime']}</li>
+                    <li class="col-xs-5 col-md-3 col-lg-3"><i class="fa fa-list-alt"></i> <a href="{:U('Home/Index/category',array('cid'=>$v['cid']))}" target="_blank">{$v['category']['cname']}</a></li>
+                        <li class="col-xs-7 col-md-3 col-lg-3 "><i class="fa fa-tags"></i>
                             <foreach name="v['tag']" item="n"> <a class="b-tag-name" href="{:U('Home/Index/tag',array('tid'=>$n['tid']))}" target="_blank">{$n['tname']}</a></foreach>
                         </li>
+                        <li class="col-xs-5 col-md-2 col-lg-2"><i class="fa fa-users"></i> {$v['click']}次浏览</li>
                 </ul>
             </div>
             <div class="col-xs-12 col-md-12 col-lg-12">
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-4 hidden-xs">
                     <!-- figure用作文档中插图的图像 -->
+                        <empty name="v['pic_path']">
+                        <figure class="b-oa-pic b-style1"> <a href="{$v['url']}" target="_blank"><img src="__Home_IMAGE__/nopic.png" alt="{$Think.config.IMAGE_TITLE_ALT_WORD}" title="{$Think.config.IMAGE_TITLE_ALT_WORD}"></a>
+                            <figcaption><a href="{$v['url']}" target="_blank"></a></figcaption>
+                        </figure>
+                        <else/>
                         <figure class="b-oa-pic b-style1"> <a href="{$v['url']}" target="_blank"><img src="{$v['pic_path']}" alt="{$Think.config.IMAGE_TITLE_ALT_WORD}" title="{$Think.config.IMAGE_TITLE_ALT_WORD}"></a>
                             <figcaption><a href="{$v['url']}" target="_blank"></a></figcaption>
                         </figure>
+                        </empty>
                     </div>
                     <div class="col-xs-12 col-sm-6  col-md-6 col-lg-8 b-des-read"> {$v['description']}</div>
                 </div>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <include file="Public/public_head" title="{$category['cname']}-" keywords="{$category['keywords']}" description="{$category['description']}" />
+    <!-- SE0优化canonical标签是HTML里面一个规范网址的元素，当我们的网页可以通过多个URL来访问的时候，我们可以通过canonical标签告诉搜索引擎这多个URL中的首选网址，也就是你这个网页内容想在搜索引擎中展现的指定网址，通常在搜索引擎看来，这个指定的页面是这多个URL中最有价值最规范的页面。
+    U('地址','参数','伪静态','是否跳转','显示域名'); -->
+    <link rel="canonical" href="{:U('Home/Index/category',array('cid'=>$_GET['cid']),'',true)}" />
+</head>
+
+<body>
+    <include file="Public/public_nav" />
+    <div class="b-h-70"></div>
+    <div id="b-content" class="container">
+        <div class="row">
+            <include file="Public/public_list" />
+            <include file="Public/public_right" />
+        </div>
+        <div class="row">
+            <include file="Public/public_foot" />
+        </div>
+    </div>
+    <include file="Public/public_login" />
+</body>
+
+</html>

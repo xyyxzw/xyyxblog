@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-22 10:20:18
+ * @Last Modified time: 2018-02-23 15:27:51
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -34,7 +34,7 @@ class ArticleModel extends BaseModel{
         }else{
             $data=I('post.description');
             $des=htmlspecialchars_decode($data);
-            $des=re_substr(strip_tags($des),0,100);
+            $des=re_substr(strip_tags($des),0,100);//此处为优化版 省去了...这个尾巴参数
             return $des;
         }
     }
@@ -118,7 +118,64 @@ class ArticleModel extends BaseModel{
             'type'=>'index',
             'id'=>0
             );
-    }
+    }elseif ($cid=='all' && $tid!='all') {
+            // 获取tid下的全部文章
+            if($is_show=='all'){
+                $where=array(
+                    'at.tid'=>$tid,
+                    'a.is_delete'=>$is_delete
+                    );
+            }else{$where=array(
+                    'at.tid'=>$tid,
+                    'a.is_delete'=>$is_delete,
+                    'a.is_show'=>$is_show
+                    );
+            }
+            $count=M('article_tag')
+                ->alias('at')
+                ->join('__ARTICLE__ a ON at.aid=a.aid')
+                ->where($where)
+                ->count();
+            $page=new \Org\Xyyx\Page($count,$limit);
+            $list=M('article_tag')
+                ->alias('at')
+                ->join('__ARTICLE__ a ON at.aid=a.aid')
+                ->where($where)
+                ->order('a.addtime desc')
+                ->limit($page->firstRow.','.$page->listRows)
+                ->select();
+            $extend=array(
+                'type'=>'tid',
+                'id'=>$tid
+                );
+        }elseif ($cid!='all' && $tid=='all') {
+            // 获取cid下的全部文章
+            if($is_show=='all'){
+                $where=array(
+                    'cid'=>$cid,
+                    'is_delete'=>$is_delete,
+                    );
+            }else{
+                $where=array(
+                    'cid'=>$cid,
+                    'is_delete'=>$is_delete,
+                    'is_show'=>$is_show
+                    );
+            }
+            $count=$this
+                ->where($where)
+                ->count();
+            $page=new \Org\Xyyx\Page($count,$limit);
+            $list=$this
+                ->where($where)
+                ->order('addtime desc')
+                ->limit($page->firstRow.','.$page->listRows)
+                ->select();
+            $extend=array(
+                'type'=>'cid',
+                'id'=>$cid
+                );
+        }
     $show=$page->show();
     foreach($list as $k=>$v){
         $list[$k]['addtime']=word_time($v['addtime']);
@@ -132,6 +189,7 @@ class ArticleModel extends BaseModel{
         $list[$k]['content']=htmlspecialchars($v['content']);
         $list[$k]['url']=U('Home/Index/article/',array('aid'=>$v['aid']));
         $list[$k]['extend']=$extend;
+        // $list[$k]['click']=$v['click'];
     }
     $data=array(
         'page'=>$show,
@@ -140,16 +198,16 @@ class ArticleModel extends BaseModel{
     return $data;
   }
 
-  // 传递aid获取单条全部数据
-  public function getDataByAid($aid){
-    $data=$this->where(array('aid'=>$aid))->find();
-    $data['tids']=D('ArticleTag')->getDataByAid($aid);
-    $data['tag']=D('ArticleTag')->getDataByAid($aid,'all');
-    $data['category']=current(D('Category')->getDataByCid($data['cid'],'cid,cid,cname,keywords'));
-    // 获取相对路径的图片地址
-    $data['content']=preg_ueditor_image_path($data['content']);
-    return $data;
-  }
+  // // 传递aid获取单条全部数据
+  // public function getDataByAid($aid){
+  //   $data=$this->where(array('aid'=>$aid))->find();
+  //   $data['tids']=D('ArticleTag')->getDataByAid($aid);
+  //   $data['tag']=D('ArticleTag')->getDataByAid($aid,'all');
+  //   $data['category']=current(D('Category')->getDataByCid($data['cid'],'cid,cid,cname,keywords'));
+  //   // 获取相对路径的图片地址
+  //   $data['content']=preg_ueditor_image_path($data['content']);
+  //   return $data;
+  // }
 
   // 修改数据
   public function editData(){
@@ -203,5 +261,63 @@ class ArticleModel extends BaseModel{
       D('ArticleTag')->deleteData($aid);
       $this->where(array('aid'=>$aid))->delete();
       return true;
+  }
+
+  // 传递aid获取单条全部数据 $map 主要为前台页面上下页使用
+  public function getDataByAid($aid,$map=''){
+      if($map==''){
+          // $map 为空则不获取上下篇文章
+          $data=$this->where(array('aid'=>$aid))->find();
+          $data['tids']=D('ArticleTag')->getDataByAid($aid);
+          $data['tag']=D('ArticleTag')->getDataByAid($aid,'all');
+          $data['category']=current(D('Category')->getDataByCid($data['cid'],'cid,cid,cname,keywords'));
+          // 获取相对路径的图片地址
+          $data['content']=preg_ueditor_image_path($data['content']);
+      }else{
+          if(isset($map['tid'])){
+              // 根据此标签tid获取上下篇文章
+              $prev_map['at.tid']=$map['tid'];
+              $prev_map[]=array('a.is_show'=>1);
+              $prev_map[]=array('a.is_delete'=>0);
+              $next_map=$prev_map;
+              $prev_map['a.aid']=array('gt',$aid);
+              $next_map['a.aid']=array('lt',$aid);
+              $data['prev']=$this->field('a.aid,a.title')->alias('a')->join('__ARTICLE_TAG__ at ON a.aid=at.aid')->where($prev_map)->limit(1)->find();
+              $data['next']=$this->field('a.aid,a.title')->alias('a')->join('__ARTICLE_TAG__ at ON a.aid=at.aid')->where($next_map)->order('a.aid desc')->limit(1)->find();
+          }else if(isset($map['cid'])){
+              // 根据此分类cid获取上下篇文章
+              $prev_map=$map;
+              $prev_map[]=array('is_show'=>1);
+              $prev_map[]=array('is_delete'=>0);
+              $next_map=$prev_map;
+              $prev_map['aid']=array('gt',$aid);
+              $next_map['aid']=array('lt',$aid);
+              $data['prev']=$this->field('aid,title')->where($prev_map)->limit(1)->find();
+              $data['next']=$this->field('aid,title')->where($next_map)->order('aid desc')->limit(1)->find();
+          }else{
+              // 根据搜索词获取上下篇文章
+              $prev_map=array('title'=>array('like','%'.$map['title'].'%'));
+              $prev_map[]=array('is_show'=>1);
+              $prev_map[]=array('is_delete'=>0);
+              $next_map=$prev_map;
+              $prev_map['aid']=array('gt',$aid);
+              $next_map['aid']=array('lt',$aid);
+              $data['prev']=$this->field('aid,title')->where($prev_map)->limit(1)->find();
+              $data['next']=$this->field('aid,title')->where($next_map)->order('aid desc')->limit(1)->find();
+          }
+          // 如果不为空 添加url
+          if(!empty($data['prev'])){
+              $data['prev']['url']=U('Home/Index/article/',array('aid'=>$data['prev']['aid']));
+          }
+          if(!empty($data['next'])){
+              $data['next']['url']=U('Home/Index/article/',array('aid'=>$data['next']['aid']));
+          }
+          $data['current']=$this->where(array('aid'=>$aid))->find();
+          $data['current']['tids']=D('ArticleTag')->getDataByAid($aid);
+          $data['current']['tag']=D('ArticleTag')->getDataByAid($aid,'all');
+          $data['current']['category']=current(D('Category')->getDataByCid($data['current']['cid'],'cid,cid,cname,keywords'));
+          $data['current']['content']=preg_ueditor_image_path($data['current']['content']);
+      }
+      return $data;
   }
 }
