@@ -1,399 +1,278 @@
--- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: 2018-01-16 08:21:10
--- 服务器版本： 5.7.14
--- PHP Version: 5.6.25
+/*
+SQLyog  v12.2.6 (64 bit)
+MySQL - 5.7.14-log : Database - xyyxblog
+*********************************************************************
+*/
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+/*!40101 SET NAMES utf8 */;
 
+/*!40101 SET SQL_MODE=''*/;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`xyyxblog` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
---
--- Database: `xyyxblog`
---
+USE `xyyxblog`;
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_article` */
 
---
--- 表的结构 `xyyx_article`
---
+DROP TABLE IF EXISTS `xyyx_article`;
 
 CREATE TABLE `xyyx_article` (
-  `aid` int(10) UNSIGNED NOT NULL COMMENT '文章表主键',
+  `aid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章表主键',
   `title` char(100) NOT NULL DEFAULT '' COMMENT '标题',
   `author` varchar(15) NOT NULL DEFAULT '' COMMENT '作者',
   `content` mediumtext NOT NULL COMMENT '文章内容',
   `keywords` varchar(255) NOT NULL DEFAULT '' COMMENT '关键字',
   `description` char(255) NOT NULL DEFAULT '' COMMENT '描述',
-  `is_show` tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '文章是否显示 1是 0否',
-  `is_delete` tinyint(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否删除 1是 0否',
-  `is_top` tinyint(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否置顶 1是 0否',
-  `is_original` tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '是否原创',
-  `click` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '点击数',
-  `addtime` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '添加时间',
-  `cid` tinyint(2) UNSIGNED NOT NULL DEFAULT '0' COMMENT '分类id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '文章是否显示 1是 0否',
+  `is_delete` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否删除 1是 0否',
+  `is_top` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否置顶 1是 0否',
+  `is_original` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否原创',
+  `click` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '点击数',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '添加时间',
+  `cid` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '分类id',
+  PRIMARY KEY (`aid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_article`
---
+/*Data for the table `xyyx_article` */
 
-INSERT INTO `xyyx_article` (`aid`, `title`, `author`, `content`, `keywords`, `description`, `is_show`, `is_delete`, `is_top`, `is_original`, `click`, `addtime`, `cid`) VALUES
-(17, '测试文章标题', '徐逸以轩', '&lt;p&gt;测试文章内容&lt;img alt=&quot;徐逸以轩博客&quot; src=&quot;/Upload/image/ueditor/20150601/1433171136139793.jpg&quot; title=&quot;徐逸以轩博客&quot;/&gt;&lt;/p&gt;', '关键词,多个', '测试文章描述', 1, 0, 1, 1, 376, 1432649909, 28);
+insert  into `xyyx_article`(`aid`,`title`,`author`,`content`,`keywords`,`description`,`is_show`,`is_delete`,`is_top`,`is_original`,`click`,`addtime`,`cid`) values 
+(1,'有关tp的一些知识','徐逸以轩','&lt;p style=&quot;text-align: center;&quot;&gt;ThinkPhp V3.2&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;/Upload/image/ueditor/20180222/1519259987923849.png&quot; title=&quot;徐逸以轩博客s&quot; alt=&quot;徐逸以轩博客s&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-family: 隶书, SimLi; font-size: 24px;&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-family: 隶书, SimLi; color: rgb(255, 0, 0);&quot;&gt;迈向PHP专家必经之路——刘世龙&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;','框架,PHP','可以通过框架提升开发速度！多加利用！ThinkPHP是为了简化企业级应用开发和敏捷WEB应用开发而诞生的。最早诞生于2006年初，2007年元旦正式更名为ThinkPHP，并且遵循Apache2开源协...',1,0,1,1,10,1519260060,2),
+(2,'JavaScript截取、切割字符串的技巧','徐逸以轩','&lt;p style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;/Upload/image/ueditor/20180222/1519306196181034.png&quot; title=&quot;徐逸以轩博客s&quot; alt=&quot;徐逸以轩博客s&quot;/&gt;&lt;/p&gt;&lt;p&gt;对于字符串的切割截取平时所用可能不是特别多，而且分的比较细，所以自备自查。有备无患。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;由于之前所有均在一个demo测试，若是哪里打错了，敬请谅解。一些其余属性找时间继续添加。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;1.函数：split()&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;功能：使用一个指定的分隔符把一个字符串分割存储到数组&lt;br/&gt;&lt;/p&gt;&lt;p&gt;例子： str=”jpg|bmp|gif|ico|png”; arr=str.split(”|”);&lt;br/&gt; //arr是一个包含字符值”jpg”、”bmp”、”gif”、”ico”和”png”的数组&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;2.函数：join()&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;功能：使用您选择的分隔符将一个数组合并为一个字符串&lt;br/&gt;&lt;/p&gt;&lt;p&gt;例子： var delimitedString=myArray.join(delimiter);&lt;br/&gt; var myList=new Array(”jpg”,”bmp”,”gif”,”ico”,”png”);&lt;br/&gt;var portableList=myList.join(”|”);&lt;br/&gt; //结果是jpg|bmp|gif|ico|png&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;3.函数:concat（）&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;功能：将两个数组连接在一起；&lt;br/&gt;&lt;/p&gt;&lt;p&gt;例子：arr1=[1,2,3,4]&lt;br/&gt;　　arr2=[5,6,7,8]&lt;br/&gt;　　alert(arr1.concat(arr2)) //结果为[1,2,3,4,5,6,7,8]&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;4.函数:charAt()&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;功能：返回指定位置的字符。字符串中第一个字符的下标是 0。如果参数 index 不在 0 与 string.length 之间，该方法将返回一个空字符串。&lt;/p&gt;&lt;p&gt;例子:var str=&amp;#39;a,g,i,d,o,v,w,d,k,p&amp;#39;&lt;br/&gt; alert(str.charAt(2)) //结果为g&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;5:函数:charCodeAt()&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;功能：charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;方法 charCodeAt() 与 charAt() 方法执行的操作相似，只不过前者返回的是位于指定位置的字符的编码，而后者返回的是字符子串。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;例子：var str=&amp;#39;a,g,i,d,o,v,w,d,k,p&amp;#39;&lt;br/&gt; alert(str.charCodeAt(2)) //结果为103。即g的Unicode编码为103&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;6.函数:slice()&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;功能：arrayObject.slice(start,end)&lt;br/&gt;&lt;/p&gt;&lt;p&gt;　　start:必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;　　end:可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;　　返回一个新的数组，包含从start到end（不包括该元素）的arrayobject中的元素。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;例子：var str=&amp;#39;ahji3o3s4e6p8a0sdewqdasj&amp;#39;&lt;br/&gt;　　alert(str.slice(2,5)) //结果ji3&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;7.函数:substring()&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;定义和用法 substring 方法用于提取字符串中介于两个指定下标之间的字符。&lt;/p&gt;&lt;p&gt;语法 stringObject.substring(start,stop)&lt;/p&gt;&lt;p&gt;start 必需。一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。&lt;/p&gt;&lt;p&gt;stop 可选。一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;如果省略该参数，那么返回的子串会一直到字符串的结尾。&lt;/p&gt;&lt;p&gt;返回 一个新的字符串，该字符串值包含 stringObject 的一个子字符串，其内容是从 start 处到 stop-1 处的所有字符，其长度为 stop 减 start。 说明 substring 方法返回的子串包括 start 处的字符，但不包括 end 处的字符。 如果 start 与 end 相等，那么该方法返回的就是一个空串（即长度为 0 的字符串）。 如果 start 比 end 大，那么该方法在提取子串之前会先交换这两个参数。 如果 start 或 end 为负数，那么它将被替换为 0。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;例子:var str=&amp;#39;ahji3o3s4e6p8a0sdewqdasj&amp;#39;&lt;br/&gt; alert(str.substring(2,6)) //结果为ji3o3&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 255);&quot;&gt;8.函数:substr &lt;/span&gt;&lt;/p&gt;&lt;p&gt;定义和用法 substr 方法用于返回一个从指定位置开始的指定长度的子字符串。&lt;/p&gt;&lt;p&gt;语法 stringObject.substr(start [, length ])&lt;/p&gt;&lt;p&gt;参数 start 必需。所需的子字符串的起始位置。字符串中的第一个字符的索引为 0。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;length 可选。在返回的子字符串中应包括的字符个数。 说明 如果 length 为 0 或负数，将返回一个空字符串。 如果没有指定该参数，则子字符串将延续到stringObject的最后。&lt;br/&gt;&lt;/p&gt;&lt;p&gt;举例： var str = &amp;quot;0123456789&amp;quot;;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;　　 alert(str.substring(0));------------&amp;quot;0123456789&amp;quot;&lt;br/&gt;　　 alert(str.substring(5));------------&amp;quot;56789&amp;quot; &lt;br/&gt;　　alert(str.substring(10));-----------&amp;quot;&amp;quot; &lt;br/&gt;　　alert(str.substring(12));-----------&amp;quot;&amp;quot; &lt;br/&gt;　　alert(str.substring(-5));-----------&amp;quot;0123456789&amp;quot; &lt;br/&gt;　　alert(str.substring(-10));----------&amp;quot;0123456789&amp;quot; &lt;br/&gt;　　alert(str.substring(-12));----------&amp;quot;0123456789&amp;quot; &lt;br/&gt;　　alert(str.substring(0,5));----------&amp;quot;01234&amp;quot; &lt;br/&gt;　　alert(str.substring(0,10));---------&amp;quot;0123456789&amp;quot; &lt;br/&gt;　　alert(str.substring(0,12));---------&amp;quot;0123456789&amp;quot; &lt;br/&gt;　　alert(str.substring(2,0));----------&amp;quot;01&amp;quot; &lt;br/&gt;　　alert(str.substring(2,2));----------&amp;quot;&amp;quot; &lt;br/&gt;　　alert(str.substring(2,5));----------&amp;quot;234&amp;quot; &lt;br/&gt;　　alert(str.substring(2,12));---------&amp;quot;23456789&amp;quot; &lt;br/&gt;　　alert(str.substring(2,-2));---------&amp;quot;01&amp;quot; &lt;br/&gt;　　alert(str.substring(-1,5));---------&amp;quot;01234&amp;quot; &lt;br/&gt;　　alert(str.substring(-1,-5));--------&amp;quot;&amp;quot;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','截取,字符串','JavaScript截取、切割字符串的技巧',1,0,0,1,7,1519306102,3),
+(3,'tab栏切换的原理','徐逸以轩','&lt;p&gt;HI!本文是我学习tab栏切换时的笔记，步骤很详细。比较适用于JavaScript初学者&lt;/p&gt;&lt;p&gt;&lt;strong&gt;1.基础 - 排他思想&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;如图，点击任意一个按钮，当前按钮应该显示橘色，其他显示默认颜色灰色。&lt;/p&gt;&lt;p&gt;代码运行步骤：&lt;/p&gt;&lt;p&gt;利用for循环遍历5个按钮；&lt;/p&gt;&lt;p&gt;选中的按钮进行 onclick 事件时，首先删除所有按钮的类名，使其全部显示灰色（34行）；&lt;/p&gt;&lt;p&gt;然后给当前点击的按钮添加指定类名，使其显示橘色（37行）。&lt;/p&gt;&lt;p style=&quot;text-align: center&quot;&gt;&lt;img alt=&quot;徐逸以轩博客s&quot; src=&quot;http://files.jb51.net/file_images/article/201703/2017322105058477.png?2017222105120&quot;/&gt;&lt;/p&gt;&lt;p&gt;示例代码：&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/109149.htm#&quot; class=&quot;toolbar_item command_help help&quot;&gt;?&lt;/a&gt;&lt;/p&gt;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line number10 index9 alt1&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line number11 index10 alt2&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line number12 index11 alt1&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line number13 index12 alt2&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line number14 index13 alt1&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line number15 index14 alt2&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line number16 index15 alt1&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line number17 index16 alt2&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line number18 index17 alt1&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line number19 index18 alt2&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line number20 index19 alt1&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line number21 index20 alt2&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line number22 index21 alt1&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line number23 index22 alt2&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line number24 index23 alt1&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line number25 index24 alt2&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line number26 index25 alt1&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line number27 index26 alt2&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line number28 index27 alt1&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line number29 index28 alt2&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line number30 index29 alt1&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line number31 index30 alt2&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line number32 index31 alt1&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line number33 index32 alt2&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line number34 index33 alt1&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line number35 index34 alt2&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line number36 index35 alt1&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line number37 index36 alt2&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line number38 index37 alt1&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line number39 index38 alt2&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line number40 index39 alt1&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line number41 index40 alt2&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line number42 index41 alt1&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line number43 index42 alt2&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line number44 index43 alt1&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line number45 index44 alt2&quot;&gt;45&lt;/div&gt;&lt;div class=&quot;line number46 index45 alt1&quot;&gt;46&lt;/div&gt;&lt;div class=&quot;line number47 index46 alt2&quot;&gt;47&lt;/div&gt;&lt;div class=&quot;line number48 index47 alt1&quot;&gt;48&lt;/div&gt;&lt;div class=&quot;line number49 index48 alt2&quot;&gt;49&lt;/div&gt;&lt;div class=&quot;line number50 index49 alt1&quot;&gt;50&lt;/div&gt;&lt;div class=&quot;line number51 index50 alt2&quot;&gt;51&lt;/div&gt;&lt;div class=&quot;line number52 index51 alt1&quot;&gt;52&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;html&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;head&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;meta&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;charset&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;title&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;tab栏切换效果&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;title&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;style&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;media&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;screen&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;*{&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;margin: 0;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;padding: 0;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number10 index9 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;border: 0 none;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number11 index10 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;outline: none;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number12 index11 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number13 index12 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;#btns{&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number14 index13 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;width: 300px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number15 index14 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;margin: 100px auto;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number16 index15 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number17 index16 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;#btns button {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number18 index17 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;width: 60px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number19 index18 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;height: 30px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number20 index19 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;float: left;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number21 index20 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;border-right: 1px solid #ccc;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number22 index21 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number23 index22 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;.color{&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number24 index23 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;background-color: #eb923f;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number25 index24 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number26 index25 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;style&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number27 index26 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;script&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;type&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number28 index27 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;window.onload = function () {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number29 index28 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;var btns = document.getElementById(&amp;quot;btns&amp;quot;).getElementsByTagName(&amp;quot;button&amp;quot;);&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number30 index29 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;for (var i = 0; i &amp;lt; &lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;btns.length&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;; i++) {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number31 index30 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;btns[i]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.onclick&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;function&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;() {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number32 index31 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;for (var &lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;j&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;0&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;; j &amp;lt; btns.length; j++) {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number33 index32 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;//把所有的button清空类名&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number34 index33 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;btns[j]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.className&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number35 index34 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number36 index35 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;//点击的那个盒子添加指定类名&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number37 index36 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;this.className&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;color&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number38 index37 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number39 index38 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number40 index39 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number41 index40 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number42 index41 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;head&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number43 index42 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;body&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number44 index43 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;id&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;btns&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number45 index44 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;class&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;color&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮1&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number46 index45 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮2&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number47 index46 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮3&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number48 index47 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮4&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number49 index48 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮5&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number50 index49 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number51 index50 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;body&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number52 index51 alt1&quot;&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;html&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;&lt;strong&gt;2.tab栏切换&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;如图：在排他思想的基础上，五个按钮底下添加五个新盒子，并用一个大盒子将按钮和底下的盒子包裹。&lt;/p&gt;&lt;p&gt;底下的盒子全部隐藏，默认只显示第一个。&lt;/p&gt;&lt;p style=&quot;text-align: center&quot;&gt;&lt;img alt=&quot;徐逸以轩博客s&quot; src=&quot;http://files.jb51.net/file_images/article/201703/2017322105043717.png?2017222105146&quot;/&gt;&lt;/p&gt;&lt;p&gt;新增步骤：&lt;/p&gt;&lt;p&gt;为btns[i]添加自定义属性index，用来关联下面的大盒子（42行）；&lt;/p&gt;&lt;p&gt;点击按钮后先让底下的盒子全部隐藏（54行）；&lt;/p&gt;&lt;p&gt;然后给当前所点击按钮相关联的盒子添加指定属性（57行）。&lt;/p&gt;&lt;p&gt;示例代码：&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://www.jb51.net/article/109149.htm#&quot; class=&quot;toolbar_item command_help help&quot;&gt;?&lt;/a&gt;&lt;/p&gt;&lt;table cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;tbody&gt;&lt;tr class=&quot;firstRow&quot;&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line number10 index9 alt1&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line number11 index10 alt2&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line number12 index11 alt1&quot;&gt;12&lt;/div&gt;&lt;div class=&quot;line number13 index12 alt2&quot;&gt;13&lt;/div&gt;&lt;div class=&quot;line number14 index13 alt1&quot;&gt;14&lt;/div&gt;&lt;div class=&quot;line number15 index14 alt2&quot;&gt;15&lt;/div&gt;&lt;div class=&quot;line number16 index15 alt1&quot;&gt;16&lt;/div&gt;&lt;div class=&quot;line number17 index16 alt2&quot;&gt;17&lt;/div&gt;&lt;div class=&quot;line number18 index17 alt1&quot;&gt;18&lt;/div&gt;&lt;div class=&quot;line number19 index18 alt2&quot;&gt;19&lt;/div&gt;&lt;div class=&quot;line number20 index19 alt1&quot;&gt;20&lt;/div&gt;&lt;div class=&quot;line number21 index20 alt2&quot;&gt;21&lt;/div&gt;&lt;div class=&quot;line number22 index21 alt1&quot;&gt;22&lt;/div&gt;&lt;div class=&quot;line number23 index22 alt2&quot;&gt;23&lt;/div&gt;&lt;div class=&quot;line number24 index23 alt1&quot;&gt;24&lt;/div&gt;&lt;div class=&quot;line number25 index24 alt2&quot;&gt;25&lt;/div&gt;&lt;div class=&quot;line number26 index25 alt1&quot;&gt;26&lt;/div&gt;&lt;div class=&quot;line number27 index26 alt2&quot;&gt;27&lt;/div&gt;&lt;div class=&quot;line number28 index27 alt1&quot;&gt;28&lt;/div&gt;&lt;div class=&quot;line number29 index28 alt2&quot;&gt;29&lt;/div&gt;&lt;div class=&quot;line number30 index29 alt1&quot;&gt;30&lt;/div&gt;&lt;div class=&quot;line number31 index30 alt2&quot;&gt;31&lt;/div&gt;&lt;div class=&quot;line number32 index31 alt1&quot;&gt;32&lt;/div&gt;&lt;div class=&quot;line number33 index32 alt2&quot;&gt;33&lt;/div&gt;&lt;div class=&quot;line number34 index33 alt1&quot;&gt;34&lt;/div&gt;&lt;div class=&quot;line number35 index34 alt2&quot;&gt;35&lt;/div&gt;&lt;div class=&quot;line number36 index35 alt1&quot;&gt;36&lt;/div&gt;&lt;div class=&quot;line number37 index36 alt2&quot;&gt;37&lt;/div&gt;&lt;div class=&quot;line number38 index37 alt1&quot;&gt;38&lt;/div&gt;&lt;div class=&quot;line number39 index38 alt2&quot;&gt;39&lt;/div&gt;&lt;div class=&quot;line number40 index39 alt1&quot;&gt;40&lt;/div&gt;&lt;div class=&quot;line number41 index40 alt2&quot;&gt;41&lt;/div&gt;&lt;div class=&quot;line number42 index41 alt1&quot;&gt;42&lt;/div&gt;&lt;div class=&quot;line number43 index42 alt2&quot;&gt;43&lt;/div&gt;&lt;div class=&quot;line number44 index43 alt1&quot;&gt;44&lt;/div&gt;&lt;div class=&quot;line number45 index44 alt2&quot;&gt;45&lt;/div&gt;&lt;div class=&quot;line number46 index45 alt1&quot;&gt;46&lt;/div&gt;&lt;div class=&quot;line number47 index46 alt2&quot;&gt;47&lt;/div&gt;&lt;div class=&quot;line number48 index47 alt1&quot;&gt;48&lt;/div&gt;&lt;div class=&quot;line number49 index48 alt2&quot;&gt;49&lt;/div&gt;&lt;div class=&quot;line number50 index49 alt1&quot;&gt;50&lt;/div&gt;&lt;div class=&quot;line number51 index50 alt2&quot;&gt;51&lt;/div&gt;&lt;div class=&quot;line number52 index51 alt1&quot;&gt;52&lt;/div&gt;&lt;div class=&quot;line number53 index52 alt2&quot;&gt;53&lt;/div&gt;&lt;div class=&quot;line number54 index53 alt1&quot;&gt;54&lt;/div&gt;&lt;div class=&quot;line number55 index54 alt2&quot;&gt;55&lt;/div&gt;&lt;div class=&quot;line number56 index55 alt1&quot;&gt;56&lt;/div&gt;&lt;div class=&quot;line number57 index56 alt2&quot;&gt;57&lt;/div&gt;&lt;div class=&quot;line number58 index57 alt1&quot;&gt;58&lt;/div&gt;&lt;div class=&quot;line number59 index58 alt2&quot;&gt;59&lt;/div&gt;&lt;div class=&quot;line number60 index59 alt1&quot;&gt;60&lt;/div&gt;&lt;div class=&quot;line number61 index60 alt2&quot;&gt;61&lt;/div&gt;&lt;div class=&quot;line number62 index61 alt1&quot;&gt;62&lt;/div&gt;&lt;div class=&quot;line number63 index62 alt2&quot;&gt;63&lt;/div&gt;&lt;div class=&quot;line number64 index63 alt1&quot;&gt;64&lt;/div&gt;&lt;div class=&quot;line number65 index64 alt2&quot;&gt;65&lt;/div&gt;&lt;div class=&quot;line number66 index65 alt1&quot;&gt;66&lt;/div&gt;&lt;div class=&quot;line number67 index66 alt2&quot;&gt;67&lt;/div&gt;&lt;div class=&quot;line number68 index67 alt1&quot;&gt;68&lt;/div&gt;&lt;div class=&quot;line number69 index68 alt2&quot;&gt;69&lt;/div&gt;&lt;div class=&quot;line number70 index69 alt1&quot;&gt;70&lt;/div&gt;&lt;div class=&quot;line number71 index70 alt2&quot;&gt;71&lt;/div&gt;&lt;div class=&quot;line number72 index71 alt1&quot;&gt;72&lt;/div&gt;&lt;div class=&quot;line number73 index72 alt2&quot;&gt;73&lt;/div&gt;&lt;div class=&quot;line number74 index73 alt1&quot;&gt;74&lt;/div&gt;&lt;div class=&quot;line number75 index74 alt2&quot;&gt;75&lt;/div&gt;&lt;div class=&quot;line number76 index75 alt1&quot;&gt;76&lt;/div&gt;&lt;div class=&quot;line number77 index76 alt2&quot;&gt;77&lt;/div&gt;&lt;div class=&quot;line number78 index77 alt1&quot;&gt;78&lt;/div&gt;&lt;div class=&quot;line number79 index78 alt2&quot;&gt;79&lt;/div&gt;&lt;div class=&quot;line number80 index79 alt1&quot;&gt;80&lt;/div&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;div class=&quot;line number1 index0 alt2&quot;&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number2 index1 alt1&quot;&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;html&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number3 index2 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;head&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number4 index3 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;meta&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;charset&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;utf-8&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number5 index4 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;title&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;tab栏切换效果&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;title&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number6 index5 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;style&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;media&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;screen&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number7 index6 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;*{&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number8 index7 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;margin: 0;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number9 index8 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;padding: 0;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number10 index9 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;border: 0 none;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number11 index10 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;outline: none;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number12 index11 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number13 index12 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;.baohan{&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number14 index13 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;width: 300px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number15 index14 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;margin: 100px auto;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number16 index15 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;border: 1px solid #ccc;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number17 index16 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number18 index17 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;#btns button {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number19 index18 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;width: 60px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number20 index19 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;height: 30px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number21 index20 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;float: left;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number22 index21 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;border-right: 1px solid #ccc;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number23 index22 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number24 index23 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;#divs div {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number25 index24 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;width: 300px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number26 index25 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;height: 100px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number27 index26 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;font-size: 60px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number28 index27 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;padding-top: 60px;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number29 index28 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;background-color: #eb923f;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number30 index29 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;text-align: center;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number31 index30 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;display: none;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number32 index31 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number33 index32 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;.color{&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number34 index33 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;background-color: #eb923f;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number35 index34 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number36 index35 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;style&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number37 index36 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;script&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;type&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;text/javascript&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number38 index37 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;window.onload = function () {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number39 index38 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;var btns = document.getElementById(&amp;quot;btns&amp;quot;).getElementsByTagName(&amp;quot;button&amp;quot;);&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number40 index39 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;var divs = document.getElementById(&amp;quot;divs&amp;quot;).getElementsByTagName(&amp;quot;div&amp;quot;);&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number41 index40 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;for (var i = 0; i &amp;lt; &lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;btns.length&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;; i++) {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number42 index41 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;btns[i]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.index&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= i; //自定义属性，用于关联下面的大盒子&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number43 index42 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;btns[i]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.onclick&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;function&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;() {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number44 index43 alt1&quot;&gt;&amp;nbsp;&lt;/div&gt;&lt;div class=&quot;line number45 index44 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;for (var &lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;j&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;0&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;; j &amp;lt; btns.length; j++) {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number46 index45 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;//把所有的button清空类名&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number47 index46 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;btns[j]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.className&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number48 index47 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number49 index48 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;//点击的那个盒子添加指定类名&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number50 index49 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;this.className&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;color&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number51 index50 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;for (var &lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;i&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;0&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;; i &amp;lt; divs.length; i++) {&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number52 index51 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;//先让底下的div全部隐藏&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number53 index52 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;divs[i]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.style.display&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;none&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number54 index53 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number55 index54 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;//然后给当前所点击按钮相关联的盒子添加指定属性&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number56 index55 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;divs[this.index]&lt;/code&gt;&lt;code class=&quot;xhtml color1&quot;&gt;.style.display&lt;/code&gt; &lt;code class=&quot;xhtml plain&quot;&gt;= &lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;block&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number57 index56 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number58 index57 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number59 index58 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;}&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number60 index59 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number61 index60 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;head&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number62 index61 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;body&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number63 index62 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;class&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;baohan&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number64 index63 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;id&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;btns&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number65 index64 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;class&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;color&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮1&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number66 index65 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮2&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number67 index66 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮3&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number68 index67 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮4&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number69 index68 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;按钮5&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;button&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number70 index69 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number71 index70 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;id&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;divs&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number72 index71 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt; &lt;code class=&quot;xhtml color1&quot;&gt;style&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;=&lt;/code&gt;&lt;code class=&quot;xhtml string&quot;&gt;&amp;quot;display:block;&amp;quot;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;1&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number73 index72 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;2&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number74 index73 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;3&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number75 index74 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;4&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number76 index75 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;5&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number77 index76 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number78 index77 alt1&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;div&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number79 index78 alt2&quot;&gt;&lt;code class=&quot;xhtml spaces&quot;&gt;&amp;nbsp;&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;body&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;div class=&quot;line number80 index79 alt1&quot;&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;lt;/&lt;/code&gt;&lt;code class=&quot;xhtml keyword&quot;&gt;html&lt;/code&gt;&lt;code class=&quot;xhtml plain&quot;&gt;&amp;gt;&lt;/code&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;p&gt;以上就是本文的全部内容，希望本文的内容对大家的学习或者工作能带来一定的帮助，同时也希望多多支持脚本之家！&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;','tab栏切换','本文主要介绍了tab栏切换的原理以及实现方法代码。具有很好的参考价值。下面跟着小编一起来看下吧',1,0,0,0,12,1519355963,3);
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_article_pic` */
 
---
--- 表的结构 `xyyx_article_pic`
---
+DROP TABLE IF EXISTS `xyyx_article_pic`;
 
 CREATE TABLE `xyyx_article_pic` (
-  `ap_id` int(10) UNSIGNED NOT NULL COMMENT '主键',
+  `ap_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
   `path` varchar(100) NOT NULL DEFAULT '' COMMENT '图片路径',
-  `aid` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '所属文章id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `aid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '所属文章id',
+  PRIMARY KEY (`ap_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_article_pic`
---
+/*Data for the table `xyyx_article_pic` */
 
-INSERT INTO `xyyx_article_pic` (`ap_id`, `path`, `aid`) VALUES
-(11, '/Upload/image/ueditor/20150601/1433171136139793.jpg', 17);
+insert  into `xyyx_article_pic`(`ap_id`,`path`,`aid`) values 
+(3,'/Upload/image/ueditor/20180222/1519259987923849.png',1),
+(4,'/Upload/image/ueditor/20180222/1519306196181034.png',2);
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_article_tag` */
 
---
--- 表的结构 `xyyx_article_tag`
---
+DROP TABLE IF EXISTS `xyyx_article_tag`;
 
 CREATE TABLE `xyyx_article_tag` (
-  `aid` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '文章id',
-  `tid` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '标签id'
+  `aid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '文章id',
+  `tid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '标签id'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_article_tag`
---
+/*Data for the table `xyyx_article_tag` */
 
-INSERT INTO `xyyx_article_tag` (`aid`, `tid`) VALUES
-(17, 20);
+insert  into `xyyx_article_tag`(`aid`,`tid`) values 
+(1,1),
+(1,2),
+(2,3),
+(2,4),
+(3,3),
+(3,4);
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_category` */
 
---
--- 表的结构 `xyyx_category`
---
+DROP TABLE IF EXISTS `xyyx_category`;
 
 CREATE TABLE `xyyx_category` (
-  `cid` tinyint(2) UNSIGNED NOT NULL COMMENT '分类主键id',
+  `cid` tinyint(2) unsigned NOT NULL AUTO_INCREMENT COMMENT '分类主键id',
   `cname` varchar(15) NOT NULL DEFAULT '' COMMENT '分类名称',
   `keywords` varchar(255) DEFAULT '' COMMENT '关键词',
   `description` varchar(255) DEFAULT '' COMMENT '描述',
-  `sort` tinyint(2) UNSIGNED NOT NULL DEFAULT '0' COMMENT '排序',
-  `pid` tinyint(2) UNSIGNED NOT NULL DEFAULT '0' COMMENT '父级栏目id'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `sort` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
+  `pid` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '父级栏目id',
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_category`
---
+/*Data for the table `xyyx_category` */
 
-INSERT INTO `xyyx_category` (`cid`, `cname`, `keywords`, `description`, `sort`, `pid`) VALUES
-(33, '测试', '1', '1', 4, 0),
-(34, 'php', '2', '2', 3, 0),
-(35, 'JavaScript', '3', '3', 2, 0);
+insert  into `xyyx_category`(`cid`,`cname`,`keywords`,`description`,`sort`,`pid`) values 
+(1,'php','php','php',2,0),
+(2,'thinkphp','框架','框架开发',1,1),
+(3,'JS','JS','JS',1,0);
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_chat` */
 
---
--- 表的结构 `xyyx_chat`
---
+DROP TABLE IF EXISTS `xyyx_chat`;
 
 CREATE TABLE `xyyx_chat` (
-  `chid` int(10) UNSIGNED NOT NULL COMMENT '碎言id',
-  `date` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '发表时间',
+  `chid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '碎言id',
+  `date` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发表时间',
   `content` text NOT NULL COMMENT '内容',
-  `is_show` tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '是否显示',
-  `is_delete` tinyint(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否删除'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '是否显示',
+  `is_delete` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否删除',
+  PRIMARY KEY (`chid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_chat`
---
+/*Data for the table `xyyx_chat` */
 
-INSERT INTO `xyyx_chat` (`chid`, `date`, `content`, `is_show`, `is_delete`) VALUES
-(2, 1432827004, '测试随言碎语', 1, 0),
-(3, 1444529995, '测试碎言', 1, 0);
+insert  into `xyyx_chat`(`chid`,`date`,`content`,`is_show`,`is_delete`) values 
+(1,1519455438,'闲来一笔测试',0,0),
+(2,1519455541,'闲来一笔测试',1,0),
+(3,1519460382,'完成这个闲来一笔',1,0);
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_comment` */
 
---
--- 表的结构 `xyyx_comment`
---
+DROP TABLE IF EXISTS `xyyx_comment`;
 
 CREATE TABLE `xyyx_comment` (
-  `cmtid` int(10) UNSIGNED NOT NULL COMMENT '主键id',
-  `ouid` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '评论用户id 关联oauth_user表的id',
-  `type` tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '1：文章评论',
-  `pid` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '父级id',
-  `aid` int(10) UNSIGNED NOT NULL COMMENT '文章id',
+  `cmtid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `ouid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评论用户id 关联oauth_user表的id',
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1：文章评论',
+  `pid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '父级id',
+  `aid` int(10) unsigned NOT NULL COMMENT '文章id',
   `content` text NOT NULL COMMENT '内容',
-  `date` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '评论日期',
-  `status` tinyint(1) UNSIGNED NOT NULL COMMENT '1:已审核 0：未审核',
-  `is_delete` tinyint(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否删除'
+  `date` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评论日期',
+  `status` tinyint(1) unsigned NOT NULL COMMENT '1:已审核 0：未审核',
+  `is_delete` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否删除',
+  PRIMARY KEY (`cmtid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_comment`
---
+/*Data for the table `xyyx_comment` */
 
-INSERT INTO `xyyx_comment` (`cmtid`, `ouid`, `type`, `pid`, `aid`, `content`, `date`, `status`, `is_delete`) VALUES
-(19, 1, 1, 0, 17, '测试评论&lt;img src=&quot;/Public/emote/tuzki/t_0002.gif&quot; title=&quot;Love&quot; alt=&quot;徐逸以轩博客&quot;&gt;', 1445747059, 1, 0),
-(21, 1, 1, 19, 17, '测试回复', 1447943018, 1, 0);
+/*Table structure for table `xyyx_config` */
 
--- --------------------------------------------------------
-
---
--- 表的结构 `xyyx_config`
---
+DROP TABLE IF EXISTS `xyyx_config`;
 
 CREATE TABLE `xyyx_config` (
-  `id` int(10) UNSIGNED NOT NULL COMMENT '主键',
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
   `name` varchar(100) NOT NULL DEFAULT '' COMMENT '配置项键名',
-  `value` text COMMENT '配置项键值 1表示开启 0 关闭'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `value` text COMMENT '配置项键值 1表示开启 0 关闭',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_config`
---
+/*Data for the table `xyyx_config` */
 
-INSERT INTO `xyyx_config` (`id`, `name`, `value`) VALUES
-(1, 'WEB_NAME', '徐逸以轩博客'),
-(2, 'WEB_KEYWORDS', '徐逸以轩,帅白,技术博客,个人博客,xyyxblog'),
-(3, 'WEB_DESCRIPTION', '徐逸以轩的个人技术博客,xyyxblog官方网站'),
-(4, 'WEB_STATUS', '1'),
-(5, 'ADMIN_PASSWORD', '21232f297a57a5a743894a0e4a801fc3'),
-(6, 'WATER_TYPE', '1'),
-(7, 'TEXT_WATER_WORD', 'baijunyao.com'),
-(8, 'TEXT_WATER_TTF_PTH', './Public/static/font/ariali.ttf'),
-(9, 'TEXT_WATER_FONT_SIZE', '15'),
-(10, 'TEXT_WATER_COLOR', '#008CBA'),
-(11, 'TEXT_WATER_ANGLE', '0'),
-(12, 'TEXT_WATER_LOCATE', '9'),
-(13, 'IMAGE_WATER_PIC_PTAH', './Upload/image/logo/logo.png'),
-(14, 'IMAGE_WATER_LOCATE', '9'),
-(15, 'IMAGE_WATER_ALPHA', '80'),
-(16, 'WEB_CLOSE_WORD', '网站升级中，请稍后访问。'),
-(17, 'WEB_ICP_NUMBER', '豫ICP备14009546号-3'),
-(18, 'ADMIN_EMAIL', 'baijunyao@baijunyao.com'),
-(19, 'COPYRIGHT_WORD', '本文为徐逸以轩原创文章,转载无需和我联系,但请注明来自徐逸以轩博客xyyx.com'),
-(20, 'QQ_APP_ID', ''),
-(21, 'CHANGYAN_APP_ID', 'cyrKRbJ5N'),
-(22, 'CHANGYAN_CONF', 'prod_c654661caf5ab6da98742d040413815b'),
-(23, 'WEB_STATISTICS', ''),
-(24, 'CHANGEYAN_RETURN_COMMENT', ''),
-(25, 'AUTHOR', '徐逸以轩'),
-(26, 'QQ_APP_KEY', ''),
-(27, 'CHANGYAN_COMMENT', ''),
-(28, 'BAIDU_SITE_URL', ''),
-(29, 'DOUBAN_API_KEY', ''),
-(30, 'DOUBAN_SECRET', ''),
-(31, 'RENREN_API_KEY', ''),
-(32, 'RENREN_SECRET', ''),
-(33, 'SINA_API_KEY', ''),
-(34, 'SINA_SECRET', ''),
-(35, 'KAIXIN_API_KEY', ''),
-(36, 'KAIXIN_SECRET', ''),
-(37, 'SOHU_API_KEY', ''),
-(38, 'SOHU_SECRET', ''),
-(39, 'GITHUB_CLIENT_ID', ''),
-(40, 'GITHUB_CLIENT_SECRET', ''),
-(41, 'IMAGE_TITLE_ALT_WORD', '徐逸以轩博客'),
-(42, 'EMAIL_SMTP', ''),
-(43, 'EMAIL_USERNAME', ''),
-(44, 'EMAIL_PASSWORD', ''),
-(45, 'EMAIL_FROM_NAME', ''),
-(46, 'COMMENT_REVIEW', '1'),
-(47, 'COMMENT_SEND_EMAIL', '0'),
-(48, 'EMAIL_RECEIVE', '');
+insert  into `xyyx_config`(`id`,`name`,`value`) values 
+(1,'WEB_NAME','徐逸以轩博客'),
+(2,'WEB_KEYWORDS','徐逸以轩,技术博客,个人博客,xyyxblog'),
+(3,'WEB_DESCRIPTION','徐逸以轩的个人技术博客,xyyxblog官方网站'),
+(4,'WEB_STATUS','1'),
+(5,'ADMIN_PASSWORD','e00cf25ad42683b3df678c61f42c6bda'),
+(6,'WATER_TYPE','3'),
+(7,'TEXT_WATER_WORD','xyyx'),
+(8,'TEXT_WATER_TTF_PTH','./Public/static/font/ariali.ttf'),
+(9,'TEXT_WATER_FONT_SIZE','15'),
+(10,'TEXT_WATER_COLOR','#008CBA'),
+(11,'TEXT_WATER_ANGLE','0'),
+(12,'TEXT_WATER_LOCATE','1'),
+(13,'IMAGE_WATER_PIC_PTAH','./Upload/image/logo/logo.png'),
+(14,'IMAGE_WATER_LOCATE','9'),
+(15,'IMAGE_WATER_ALPHA','80'),
+(16,'WEB_CLOSE_WORD','网站升级中，请稍后访问。'),
+(17,'WEB_ICP_NUMBER',''),
+(18,'ADMIN_EMAIL','x1227049655@163.com'),
+(19,'COPYRIGHT_WORD','本文为徐逸以轩原创文章,转载无需和我联系,但请注明来自徐逸以轩博客xyyx.com'),
+(20,'QQ_APP_ID',''),
+(21,'CHANGYAN_APP_ID','cyrKRbJ5N'),
+(22,'CHANGYAN_CONF','prod_c654661caf5ab6da98742d040413815b'),
+(23,'WEB_STATISTICS',''),
+(24,'CHANGEYAN_RETURN_COMMENT',''),
+(25,'AUTHOR','徐逸以轩'),
+(26,'QQ_APP_KEY',''),
+(27,'CHANGYAN_COMMENT',''),
+(28,'BAIDU_SITE_URL',''),
+(29,'DOUBAN_API_KEY',''),
+(30,'DOUBAN_SECRET',''),
+(31,'RENREN_API_KEY',''),
+(32,'RENREN_SECRET',''),
+(33,'SINA_API_KEY',''),
+(34,'SINA_SECRET',''),
+(35,'KAIXIN_API_KEY',''),
+(36,'KAIXIN_SECRET',''),
+(37,'SOHU_API_KEY',''),
+(38,'SOHU_SECRET',''),
+(39,'GITHUB_CLIENT_ID',''),
+(40,'GITHUB_CLIENT_SECRET',''),
+(41,'IMAGE_TITLE_ALT_WORD','徐逸以轩博客s'),
+(42,'EMAIL_SMTP',''),
+(43,'EMAIL_USERNAME',''),
+(44,'EMAIL_PASSWORD',''),
+(45,'EMAIL_FROM_NAME',''),
+(46,'COMMENT_REVIEW','1'),
+(47,'COMMENT_SEND_EMAIL','0'),
+(48,'EMAIL_RECEIVE','');
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_link` */
 
---
--- 表的结构 `xyyx_link`
---
+DROP TABLE IF EXISTS `xyyx_link`;
 
 CREATE TABLE `xyyx_link` (
-  `lid` int(10) UNSIGNED NOT NULL COMMENT '主键id',
+  `lid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
   `lname` varchar(50) NOT NULL DEFAULT '' COMMENT '链接名',
   `url` varchar(255) NOT NULL DEFAULT '' COMMENT '链接地址',
-  `sort` tinyint(3) UNSIGNED NOT NULL DEFAULT '1' COMMENT '排序',
-  `is_show` tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '文章是否显示 1是 0否',
-  `is_delete` tinyint(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否删除 1是 0否'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `sort` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '排序',
+  `is_show` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '文章是否显示 1是 0否',
+  `is_delete` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否删除 1是 0否',
+  PRIMARY KEY (`lid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_link`
---
+/*Data for the table `xyyx_link` */
 
-INSERT INTO `xyyx_link` (`lid`, `lname`, `url`, `sort`, `is_show`, `is_delete`) VALUES
-(2, '徐逸以轩博客', 'http://xyyx.com', 1, 1, 0);
+insert  into `xyyx_link`(`lid`,`lname`,`url`,`sort`,`is_show`,`is_delete`) values 
+(1,'1','http://www.baodu.com',1,1,0),
+(2,'百度','http://www.baidu.com',3,0,0),
+(3,'https','http://www.baidu.com',2,1,0);
 
--- --------------------------------------------------------
+/*Table structure for table `xyyx_oauth_user` */
 
---
--- 表的结构 `xyyx_oauth_user`
---
+DROP TABLE IF EXISTS `xyyx_oauth_user`;
 
 CREATE TABLE `xyyx_oauth_user` (
-  `id` int(10) UNSIGNED NOT NULL COMMENT '主键id',
-  `uid` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '关联的本站用户id',
-  `type` tinyint(3) UNSIGNED NOT NULL DEFAULT '1' COMMENT '类型 1：QQ  2：新浪微博 3：豆瓣 4：人人 5：开心网',
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键id',
+  `uid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '关联的本站用户id',
+  `type` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '类型 1：QQ  2：新浪微博 3：豆瓣 4：人人 5：开心网',
   `nickname` varchar(30) NOT NULL DEFAULT '' COMMENT '第三方昵称',
   `head_img` varchar(255) NOT NULL DEFAULT '' COMMENT '头像',
   `openid` varchar(40) NOT NULL DEFAULT '' COMMENT '第三方用户id',
   `access_token` varchar(255) NOT NULL DEFAULT '' COMMENT 'access_token token',
-  `create_time` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '绑定时间',
-  `last_login_time` int(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT '最后登录时间',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '绑定时间',
+  `last_login_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '最后登录时间',
   `last_login_ip` varchar(16) NOT NULL DEFAULT '' COMMENT '最后登录ip',
-  `login_times` int(6) UNSIGNED NOT NULL DEFAULT '0' COMMENT '登录次数',
-  `status` tinyint(1) UNSIGNED NOT NULL DEFAULT '1' COMMENT '状态',
+  `login_times` int(6) unsigned NOT NULL DEFAULT '0' COMMENT '登录次数',
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '状态',
   `email` varchar(255) NOT NULL DEFAULT '' COMMENT '邮箱',
-  `is_admin` tinyint(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '是否是admin'
+  `is_admin` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否是admin',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+/*Data for the table `xyyx_oauth_user` */
 
---
--- 表的结构 `xyyx_tag`
---
+/*Table structure for table `xyyx_tag` */
+
+DROP TABLE IF EXISTS `xyyx_tag`;
 
 CREATE TABLE `xyyx_tag` (
-  `tid` int(10) UNSIGNED NOT NULL COMMENT '标签主键',
-  `tname` varchar(10) NOT NULL DEFAULT '' COMMENT '标签名'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `tid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '标签主键',
+  `tname` varchar(10) NOT NULL DEFAULT '' COMMENT '标签名',
+  PRIMARY KEY (`tid`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `xyyx_tag`
---
+/*Data for the table `xyyx_tag` */
 
-INSERT INTO `xyyx_tag` (`tid`, `tname`) VALUES
-(20, '测试标签');
+insert  into `xyyx_tag`(`tid`,`tname`) values 
+(1,'php'),
+(2,'thinkphp'),
+(3,'前端'),
+(4,'JS'),
+(5,'电影'),
+(6,'伪静态'),
+(7,'apache'),
+(8,'linux'),
+(9,'数组'),
+(10,'pdo');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `xyyx_article`
---
-ALTER TABLE `xyyx_article`
-  ADD PRIMARY KEY (`aid`);
-
---
--- Indexes for table `xyyx_article_pic`
---
-ALTER TABLE `xyyx_article_pic`
-  ADD PRIMARY KEY (`ap_id`);
-
---
--- Indexes for table `xyyx_category`
---
-ALTER TABLE `xyyx_category`
-  ADD PRIMARY KEY (`cid`);
-
---
--- Indexes for table `xyyx_chat`
---
-ALTER TABLE `xyyx_chat`
-  ADD PRIMARY KEY (`chid`);
-
---
--- Indexes for table `xyyx_comment`
---
-ALTER TABLE `xyyx_comment`
-  ADD PRIMARY KEY (`cmtid`);
-
---
--- Indexes for table `xyyx_config`
---
-ALTER TABLE `xyyx_config`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `xyyx_link`
---
-ALTER TABLE `xyyx_link`
-  ADD PRIMARY KEY (`lid`);
-
---
--- Indexes for table `xyyx_oauth_user`
---
-ALTER TABLE `xyyx_oauth_user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `xyyx_tag`
---
-ALTER TABLE `xyyx_tag`
-  ADD PRIMARY KEY (`tid`);
-
---
--- 在导出的表使用AUTO_INCREMENT
---
-
---
--- 使用表AUTO_INCREMENT `xyyx_article`
---
-ALTER TABLE `xyyx_article`
-  MODIFY `aid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '文章表主键', AUTO_INCREMENT=18;
---
--- 使用表AUTO_INCREMENT `xyyx_article_pic`
---
-ALTER TABLE `xyyx_article_pic`
-  MODIFY `ap_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=12;
---
--- 使用表AUTO_INCREMENT `xyyx_category`
---
-ALTER TABLE `xyyx_category`
-  MODIFY `cid` tinyint(2) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '分类主键id', AUTO_INCREMENT=36;
---
--- 使用表AUTO_INCREMENT `xyyx_chat`
---
-ALTER TABLE `xyyx_chat`
-  MODIFY `chid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '碎言id', AUTO_INCREMENT=4;
---
--- 使用表AUTO_INCREMENT `xyyx_comment`
---
-ALTER TABLE `xyyx_comment`
-  MODIFY `cmtid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键id', AUTO_INCREMENT=22;
---
--- 使用表AUTO_INCREMENT `xyyx_config`
---
-ALTER TABLE `xyyx_config`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键', AUTO_INCREMENT=49;
---
--- 使用表AUTO_INCREMENT `xyyx_link`
---
-ALTER TABLE `xyyx_link`
-  MODIFY `lid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键id', AUTO_INCREMENT=3;
---
--- 使用表AUTO_INCREMENT `xyyx_oauth_user`
---
-ALTER TABLE `xyyx_oauth_user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键id';
---
--- 使用表AUTO_INCREMENT `xyyx_tag`
---
-ALTER TABLE `xyyx_tag`
-  MODIFY `tid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '标签主键', AUTO_INCREMENT=21;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

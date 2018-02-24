@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:40:04
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-08 16:28:27
+ * @Last Modified time: 2018-02-24 16:39:22
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -34,7 +34,7 @@ class TagModel extends BaseModel{
     public function getAllData(){
         $data=$this->select();
         foreach($data as $k=>$v){
-            // $data[$k]['count']=M('Article_tag')->where(array('tid'=>$v['tid']))->count();
+            $data[$k]['count']=M('Article_tag')->where(array('tid'=>$v['tid']))->count();
         }
         return $data;
     }

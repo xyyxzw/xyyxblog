@@ -172,7 +172,7 @@ a {
 
 #b-public-right .b-tags .b-all-tname .b-tname {
     margin-top: 5px;
-    margin-right: 5px;
+    margin-right: 1px;
     float: left
 }
 
@@ -711,6 +711,7 @@ a {
     position: absolute;
     right: -20px
 }
+  /*transparent 默认值。边框颜色为透明。做出三角形形状 有2个b-chat-left 是为了动画效果animation-name: bounceInLeft;时三角形的移动位置-20px到-19px*/
 
 #b-content .b-chat .b-chat-left .b-chat-one .b-arrows-right1 .b-arrows-round {
     width: 10px;

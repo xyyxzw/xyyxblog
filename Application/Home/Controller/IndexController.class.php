@@ -7,6 +7,7 @@ class IndexController extends HomeBaseController {
     */
    //首页
    public function index(){
+    // $articles=D('Article')->getPageData('all','all','1','0',1);
     $articles=D('Article')->getPageData();
     $assign=array(
          'articles'=>$articles['data'],
@@ -161,6 +162,14 @@ class IndexController extends HomeBaseController {
     $this->display('tag');
   }
 
-
+   //闲来一笔
+   public function chat(){
+     $assign=array(
+        'data'=>D('Chat')->getDataByState(0,1),
+        'cid'=>'chat'
+      );
+     $this->assign($assign);
+     $this->display();
+   }
 
 }
