@@ -10,7 +10,7 @@ return array(
 	///Template/default/Home/Public/css
 	'__HOME_CSS__'=>__ROOT__.trim(TMPL_PATH,'.').'Home/Public/css',
 	'__HOME_JS__'=>__ROOT__.trim(TMPL_PATH,'.').'Home/Public/js',
-	'__Home_IMAGE__'=>__ROOT__.trim(TMPL_PATH,'.').'Home/Public/image',
+	'__HOME_IMAGE__'=>__ROOT__.trim(TMPL_PATH,'.').'Home/Public/image',
 	'__ADMIN_CSS__'=>__ROOT__.trim(TMPL_PATH,'.').'Admin/Public/css',
 	'__ADMIN_JS__'=>__ROOT__.trim(TMPL_PATH,'.').'Admin/Public/js',
 	'__ADMIN_IMAGE__'=>__ROOT__.trim(TMPL_PATH,'.').'Admin/Public/image',

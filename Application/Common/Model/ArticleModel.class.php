@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-23 15:27:51
+ * @Last Modified time: 2018-02-23 16:50:08
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -318,6 +318,34 @@ class ArticleModel extends BaseModel{
           $data['current']['category']=current(D('Category')->getDataByCid($data['current']['cid'],'cid,cid,cname,keywords'));
           $data['current']['content']=preg_ueditor_image_path($data['current']['content']);
       }
+      return $data;
+  }
+
+  // 传递搜索词获取数据
+  public function getDataByTitle($search_word){
+      $map=array(
+          'title'=>array('like',"%$search_word%")
+          );
+      $count=$this->where($map)->count();
+      $page=new \Org\Xyyx\Page($count,10);
+      $list=$this
+          ->where($map)
+          ->order('addtime desc')
+          ->limit($page->firstRow.','.$page->listRows)
+          ->select();
+      foreach ($list as $k => $v) {
+          $list[$k]['pic_path']=D('ArticlePic')->getDataByAid($v['aid']);
+          $list[$k]['url']=U('Home/Index/article/',array('search_word'=>$search_word,'aid'=>$v['aid']));
+          $list[$k]['tids']=D('ArticleTag')->getDataByAid($v['aid']);
+          $list[$k]['tag']=D('ArticleTag')->getDataByAid($v['aid'],'all');
+          $list[$k]['category']=current(D('Category')->getDataByCid($v['cid'],'cid,cid,cname,keywords'));
+          $list[$k]['addtime']=word_time($v['addtime']);
+      }
+      $show=$page->show();
+      $data=array(
+          'page'=>$show,
+          'data'=>$list
+          );
       return $data;
   }
 }

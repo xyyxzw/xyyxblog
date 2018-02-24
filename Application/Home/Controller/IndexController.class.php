@@ -85,10 +85,10 @@ class IndexController extends HomeBaseController {
 
        //浏览数开始
        $read=cookie('read');
-       // 判断是否已经记录过aid
+       // 判断$read这个数组cookie里面是否有$aid(文章ID）是否已经记录过aid
        if (array_key_exists($aid, $read)) {
            // 判断点击本篇文章的时间是否已经超过一天
-           if ($read[$aid]-time()>=86400) {
+           if ($read[$aid]-time()>=3600) {
                $read[$aid]=time();
                // 文章点击量+1
                M('Article')->where(array('aid'=>$aid))->setInc('click',1);
@@ -98,9 +98,10 @@ class IndexController extends HomeBaseController {
            // 文章点击量+1
            M('Article')->where(array('aid'=>$aid))->setInc('click',1);
        }
-       cookie('read',$read,864000);
+       cookie('read',$read,3600);
        //浏览数开始结束
-
+       // print_r($read);die;
+       // print_r(cookie());die;//Array ( [cid] => 0 [tid] => 0 [search_word] => 0 [XYYXSESSION] => ggd7kfe367uv9in4f3hq466o67 [read] => think:{"3":"1519450523","2":"1519450851","1":"1519450870"} )
 
 
        switch(true){
@@ -141,6 +142,24 @@ class IndexController extends HomeBaseController {
        $this->assign($assign);
        $this->display();
    }
+
+
+  //搜索
+  public function search(){
+    $search_word=I('get.search_word');
+    // $search_word=I('post.search_word');
+    $articles=D('Article')->getDataByTitle($search_word);
+    $assign=array(
+       'articles'=>$articles['data'],
+       'page'=>$articles['page'],
+       'titlekey'=>$search_word,
+       'title_word'=>'搜索到的与<span class="b-highlight">'.$search_word.'</span>相关的文章',
+       'cid'=>'index'
+      );
+    // var_dump($articles);die;
+    $this->assign($assign);
+    $this->display('tag');
+  }
 
 
 

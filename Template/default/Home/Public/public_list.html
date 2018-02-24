@@ -2,7 +2,16 @@
     <notempty name="title_word">
         <div class="row b-tag-title">
             <div class="col-xs-12 col-md-12 col-lg-12">
-                <h2>{$title_word}</h2></div>
+                <empty name="{articles}">
+                <h2>
+                    <span class="b-highlight">没有相关文章！请稍后再试！</span>
+                </h2>
+                <else/>
+                <h2>
+                {$title_word}
+                </h2>
+               </empty>
+            </div>
         </div>
     </notempty>
     <foreach name="articles" item="v">
@@ -25,7 +34,7 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 hidden-xs">
                     <!-- figure用作文档中插图的图像 -->
                         <empty name="v['pic_path']">
-                        <figure class="b-oa-pic b-style1"> <a href="{$v['url']}" target="_blank"><img src="__Home_IMAGE__/nopic.png" alt="{$Think.config.IMAGE_TITLE_ALT_WORD}" title="{$Think.config.IMAGE_TITLE_ALT_WORD}"></a>
+                        <figure class="b-oa-pic b-style1"> <a href="{$v['url']}" target="_blank"><img src="__HOME_IMAGE__/nopic.png" alt="{$Think.config.IMAGE_TITLE_ALT_WORD}" title="{$Think.config.IMAGE_TITLE_ALT_WORD}"></a>
                             <figcaption><a href="{$v['url']}" target="_blank"></a></figcaption>
                         </figure>
                         <else/>
