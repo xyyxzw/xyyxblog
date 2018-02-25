@@ -32,7 +32,7 @@ return array(
 	),
 //'SESSION_PREFIX'        =>  'xyyx',
 //URL设置
-'URL_MODEL'=>1,//为了兼容性更好而设置成1 如果确认服务器开启了mod_rewrite 请设置为 2
+'URL_MODEL'=>2,//为了兼容性更好而设置成1 如果确认服务器开启了mod_rewrite 请设置为 2
 'URL_CASE_INSENSITIVE'=>false,//区分url大小写
 //当 URL_CASE_INSENSITIVE 设置为true的时候表示URL地址不区分大小写，这个也是框架在部署模式下面的默认设置。
 // 当开启调试模式的情况下，这个参数是false，因此你会发现在调试模式下面URL区分大小写的情况。

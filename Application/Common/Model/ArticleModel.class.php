@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-23 16:50:08
+ * @Last Modified time: 2018-02-25 07:29:30
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -182,7 +182,9 @@ class ArticleModel extends BaseModel{
         $list[$k]['tag']=D('ArticleTag')->getDataByAid($v['aid'],'all');
         $list[$k]['pic_path']=D('ArticlePic')->getDataByAid($v['aid']);
         //current() 函数返回数组中的当前元素的值
-        $list[$k]['category']=current(D('Category')->getDataByCid($v['cid'],'cid,cid,cname'));
+        // $list[$k]['category']=current(D('Category')->getDataByCid($v['cid'],'cid,cid,cname'));
+        $list[$k]['category']=current(D('Category')->getDataByCid($v['cid'],'cid,cname'));
+        // $list[$k]['category']=D('Category')->getDataByCid($v['cid'],'cid,cid,cname');
         // $list[$k]['category']=D('Category')->getDataByCid($v['cid'],'cid,cname');
         //如果传入了2个以上的字段名，则返回一个二维数组（类似select方法的返回值，区别在于索引是二维数组的键名是第一个字段的值）
         $v['content']=preg_ueditor_image_path($v['content']);
