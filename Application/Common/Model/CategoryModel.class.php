@@ -60,6 +60,11 @@ class CategoryModel extends BaseModel{
 			$this->error='请先删除子分类';
 			return false;
 		}
+		 $articleData=D('Article')->getDataByCid($cid);
+        if(!empty($articleData)){
+            $this->error='请先删除此分类下的文章';
+            return false;
+        }
 		if($this->where(array('cid'=>$cid))->delete()){
 	                         return true;
 		}else{
@@ -67,5 +72,5 @@ class CategoryModel extends BaseModel{
 		}
 
 	}
-	
+
 }

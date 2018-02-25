@@ -9,6 +9,8 @@ class IndexController extends HomeBaseController {
    public function index(){
     // $articles=D('Article')->getPageData('all','all','1','0',1);
     $articles=D('Article')->getPageData();
+    // $articles=D('Article')->getDataByCid(2);
+    // var_dump($articles);die;
     $assign=array(
          'articles'=>$articles['data'],
          'page'=>$articles['page'],

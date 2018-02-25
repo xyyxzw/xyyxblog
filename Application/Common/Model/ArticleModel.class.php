@@ -3,7 +3,7 @@
  * @Author: Marte
  * @Date:   2018-01-31 08:34:22
  * @Last Modified by:   Marte
- * @Last Modified time: 2018-02-25 07:29:30
+ * @Last Modified time: 2018-02-25 18:36:11
  */
 namespace Common\Model;
 use Common\Model\BaseModel;
@@ -256,7 +256,23 @@ class ArticleModel extends BaseModel{
       }
   }
 
-  // 彻底删除
+  // // 彻底删除
+  // public function deleteData($id){
+  //     if(empty(I('get.aid',0,'intval'))){
+  //       $aid=$id;
+  //     }else{
+  //       $aid=I('get.aid',0,'intval');
+  //     }
+  //     // $aid=I('get.aid',0,'intval');
+  //     D('ArticlePic')->deleteDataAll($aid);
+  //     D('ArticleTag')->deleteData($aid);
+  //     $this->where(array('aid'=>$aid))->delete();
+  //     return true;
+  //     // return $aid;
+  // }
+
+
+   // 彻底删除
   public function deleteData(){
       $aid=I('get.aid',0,'intval');
       D('ArticlePic')->deleteDataAll($aid);
@@ -349,5 +365,22 @@ class ArticleModel extends BaseModel{
           'data'=>$list
           );
       return $data;
+  }
+
+
+  // 传递cid获得此分类下面的文章数据
+  // is_all为true时获取全部数据 false时不获取is_show为0 和is_delete为1的数据
+  public function getDataByCid($cid,$is_all=false){
+      if($is_all){
+          return $this->order('addtime desc')->select();
+      }else{
+          $where=array(
+              'cid'=>$cid,
+              'is_show'=>1,
+              'is_delete'=>0,
+          );
+          return $this->where($where)->order('addtime desc')->select();
+      }
+
   }
 }
